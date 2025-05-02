@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnífico</title>
+    <link rel="stylesheet" href="estilos.css">
+    <!-- IMPORT MAP: debe ir antes de cargar main.js -->
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.149.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.149.0/examples/jsm/"
+          }
+        }
+    </script>
+
+</head>
+<body>
+   <!-- <div id="modelo-container"></div>  📌 Contenedor del modelo, estará en el fondo -->
+    <header>
+        <div class="logo">
+            <img src="CITIES LOGO.png" alt="Logo"> <!-- Cambia la ruta a tu logo -->
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav class="nav" id="navbar">
+            <ul>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#encuentros">Nuestro Material</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#objetivos">Acerca de</a></li>
+                <li><a href="#redes">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="magnifico">
+        <div class="magnifico-content">
+            <img src="resources/banners/titulo.png" alt="">
+            <p>"Con colores<br>en mis alas <br>y salud en mi vuelo"</p><br>
+        <!--<a href="#objetivos" class="btn">Conóce más</a>-->
+        </div>
+    </section>
+
+    <!--
+    <section class="principal">
+        <div class="container-cards">
+            <div class="card">
+                <img src="resources/magni3.png" alt="Opción 1">
+                Opción 1
+            </div>
+            <div class="card">
+                <img src="resources/magni3.png" alt="Opción 2">
+                Opción 2
+            </div>
+            <div class="card">
+                <img src="resources/magni3.png" alt="Opción 3">
+                Opción 3
+            </div>
+        </div>
+    </section>
+--> 
+
+    <section class="video">
+        <div class="video-container">
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1056372393?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Magnifico prueba 2"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
+    </section>
+
+    
+    
+
+    <section id="objetivos" class="objetivos">
+        <div class="titulo-objetivos">
+            <h2>¿Quién es Magnífico?</h2>
+            <p>El colibrí es reconocido por su energía, resiliencia y capacidad de adaptación. Su vuelo ágil, su papel como polinizador y su belleza natural lo convierten en un símbolo de aprendizaje, cambio e impacto positivo.
+                En esta campaña, el colibrí recibe el nombre de "Magnífico", resaltando su grandeza y la importancia de lo extraordinario en lo cotidiano.</p>
+        
+         
+
+            <p>Más que un personaje,  Magnífico simboliza la educación, la transformación y la conexión con el entorno, siendo el emblema ideal de esta campaña para mejorar la vida de los cuencanos y cuencanas.
+            </p>
+        
+        </div>
+        <div class="container-objetivos">
+            
+            <!-- 📌 Objetivo 1 -->
+            <div class="objetivo">
+                <i class="fa-brands fa-leanpub"></i>
+                <h3>Fomentar el aprendizaje continuo</h3>
+                <p>Promover el desarrollo de habilidades y conocimientos en la comunidad cuencana a través de iniciativas educativas innovadoras.</p>
+            </div>
+    
+            <!-- 📌 Objetivo 2 -->
+            <div class="objetivo">
+                <i class="fas fa-seedling"></i>
+                <h3>Inspirar resiliencia y adaptación</h3>
+                <p>Motivar a la comunidad a enfrentar desafíos con perseverancia y flexibilidad, resaltando la importancia de la superación personal y colectiva.</p>
+            </div>
+    
+            <!-- 📌 Objetivo 3 -->
+            <div class="objetivo">
+                <i class="fas fa-users"></i>
+                <h3>Revalorizar lo extraordinario en lo cotidiano</h3>
+                <p>Sensibilizar a la comunidad sobre la importancia de pequeños cambios y acciones que pueden generar grandes transformaciones en la sociedad.</p>
+            </div>
+
+            <!-- 📌 Objetivo 4 -->
+            <div class="objetivo">
+                <i class="fa-solid fa-user-check"></i>
+                <h3>Fortalecer la identidad cultural y comunitaria</h3>
+                <p>Integrar elementos de la cultura cuencana en la campaña, reforzando el sentido de pertenencia y el orgullo por las tradiciones locales.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="encuentros" class="encuentros">
+        <div class="container-encuentros">
+            <!-- 📌 Imagen a la izquierda -->
+            <div class="imagen-encuentros">
+                <img src="resources/material.jpeg" alt="Descripción de la imagen">
+            </div>
+    
+            <!-- 📌 Texto a la derecha -->
+            <div class="texto-encuentros">
+                <h2>Utiliza nuestro material</h2>
+                <p>Te invitamos a descargar y utilizar los recursos de la campaña, incluyendo banners, gráficos, ilustraciones y más. Estos materiales están disponibles para que puedas apoyar y difundir la iniciativa de Magnífico de manera creativa. ¡Úsalos y ayúdanos a llevar nuestro mensaje a más personas!</p>
+                <a href="pages/html/materiales/materiales.html" class="btn-encuentros">Descargar material</a>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="galeria" class="galeria">
+        <div class="container-galeria">
+            <!-- 📌 Sección de texto -->
+            <div class="texto-galeria">
+                <h2>Galería de Magnífico</h2>
+                <p>En esta sección se presentarán fotografías de la campaña de Magnífico a medida que el proyecto avance. Aquí podrá encontrar y visualizar todo el material relacionado con las actividades realizadas, permitiéndole conocer en detalle el trabajo que se lleva a cabo.</p>
+            </div>
+    
+            <!-- 📌 Sección de imágenes en enlaces con overlay -->
+            <div class="imagen-galeria">
+                <a href="pages/html/galeryMagnifico/lanzamiento-personaje.html" >
+                    <img src="pages/img/galeryMagnifico/activaciones/lanzamiento-personaje3.jpeg" alt="Imagen 1">
+                    <div class="overlay-galeria">Lanzamiento de Personaje</div>
+                </a>
+                <a href="pages/html/galeryMagnifico/tranvia.html" >
+                    <img src="pages/img/galeryMagnifico/activaciones/activaciontrannvia.png" alt="Imagen 2">
+                    <div class="overlay-galeria">Activación de Tranvía</div>
+                </a>
+                <a href="pages/html/galeryMagnifico/mercado.html" >
+                    <img src="pages/img/galeryMagnifico/activaciones/activacionmercado.png" alt="Imagen 3">
+                    <div class="overlay-galeria">Activación de Mercado</div>
+                </a>
+                <a href="pages/html/galeryMagnifico/escuela.html" >
+                    <img src="pages/img/galeryMagnifico/activaciones/activacionescuela.png" alt="Imagen 4">
+                    <div class="overlay-galeria">Activación de Escuela</div>
+                </a>
+                <a href="#" >
+                    <img src="resources/characterMagnifico/magni5.png" alt="Imagen 5">
+                    <div class="overlay-galeria">Ver mas</div>
+                </a>
+                <a href="#" >
+                    <img src="resources/characterMagnifico/magni6.png" alt="Imagen 6">
+                    <div class="overlay-galeria">Ver mas</div>
+                </a>
+                <a href="#" >
+                    <img src="resources/characterMagnifico/magni7.png" alt="Imagen 7">
+                    <div class="overlay-galeria">Ver más</div>
+                </a>
+                <a href="#" >
+                    <img src="resources/characterMagnifico/magni3.png" alt="Imagen 8">
+                    <div class="overlay-galeria">Ver más</div>
+                </a>
+                <a href="#" >
+                    <img src="resources/characterMagnifico/magni4.png" alt="Imagen 9">
+                    <div class="overlay-galeria">Ver más</div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="redes" class="redes">
+        <div class="container-redes">
+            <!-- 📌 Imagen a la izquierda -->
+            <div class="imagen-redes">
+                <img src="resources/characterMagnifico/magni2.png" alt="Descripción de la imagen">
+            </div>
+    
+            <!-- 📌 Texto a la derecha -->
+            <div class="texto-redes">
+                <h2>Conéctate con nosotros</h2>
+                <p>Síguenos en nuestras redes sociales para estar al tanto de nuestras novedades y contenido exclusivo. ¡Únete a nuestra comunidad!</p>
+                <a href="https://fundacionlosfresnos.com/surveys/?s=3PRL8KAT9T9J4FN8" class="btn-redes">Contáctanos</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="organizadores">
+        <div class="container-organizadores">
+            <img src="resources/logos/amorporcuenca.png" alt="Amor por cuenca" class="logo-organizacion">
+            <img src="resources/logos/transparente.png" alt="" class="logo-organizacion">
+            <img src="resources/logos/alcaldiacuenca.png" alt="alcaldia" class="logo-organizacion">
+            <img src="resources/logos/consejosalud.png" alt="Consejo de Salud" class="logo-organizacion">
+            <img src="resources/logos/novonordisk.png" alt="Novonorddisk" class="logo-organizacion">
+            <img src="resources/logos/logocasadiabetes.png" alt="Casa de la diabetes" class="logo-organizacion">
+            <img src="resources/transparente.png" alt="" class="logo-organizacion">
+
+        </div>
+    </section>
+
+
+    <section class="footer">
+        <div class="container-footer">
+            <!-- Redes Sociales -->
+            <div>
+                <h3>Síguenos en:</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/CasaDeDiabetes" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/CasaDeDiabetes" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/casadeladiabetes" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+    
+            <!-- Enlaces útiles -->
+            <div>
+                <h3>Enlaces rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Nuestro material</a></li>
+                    <li><a href="#">Galería</a></li>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cities for Better Health - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </section>
+
+ 
+    
+    <!-- FontAwesome para iconos -->
+    <script src="https://kit.fontawesome.com/98db1f0741.js" crossorigin="anonymous"></script>
+    
+    
+    
+
+
+
+    <script type="module" src="main.js"></script>
+
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.getElementById('navbar');
+    
+        mobileMenu.addEventListener('click', () => {
+            navbar.classList.toggle('active'); // Alternar la clase 'active'
+            if (navbar.style.display === "flex") {
+                navbar.style.display = "none"; // Ocultar el navbar
+            } else {
+                navbar.style.display = "flex"; // Mostrar el navbar
+            }
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".galeria, .redes, .video, .objetivos, .encuentros");
+        
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, {
+                threshold: 0.3 // Se activará cuando el 30% de la sección sea visible
+            });
+        
+            sections.forEach((section) => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

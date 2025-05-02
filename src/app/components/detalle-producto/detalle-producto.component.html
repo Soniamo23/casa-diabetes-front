@@ -1,0 +1,142 @@
+<ng-container *ngIf="productId as id">
+  <!-- Banner de confirmación -->
+  <div *ngIf="added" class="banner-agregado">
+    ✔ Producto añadido al carrito.
+    <button class="btn-ver-carrito" [routerLink]="['/carrito']">
+      Ver carrito ({{ cart.length }})
+    </button>
+    
+  </div>
+
+  
+
+  <hr>
+
+  <!-- Detalle de producto según ID -->
+  <div class="detalle-container" [ngSwitch]="id">
+    <div *ngSwitchCase="1" class="detalle-item">
+      <div class="detalle-imagen">
+        <img src="assets/humalog.jpg" alt="Humalog Mix">
+      </div>
+      <div class="detalle-info">
+        <h1>Humalog Mix</h1>
+        <p class="precio">$11.90</p>
+        <div class="cantidad">
+          <label>Cantidad:</label>
+          <input type="number" min="1" [(ngModel)]="selectedQty">
+        </div>
+        <button class="btn-naranja" (click)="addToCart()" [disabled]="added">
+          {{ added ? 'Agregado' : 'Añadir al carrito' }}
+        </button>
+        <div class="descripcion">
+          <h3>Descripción</h3>
+          <p>
+            Insulina de acción rápida para controlar picos de glucosa.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div *ngSwitchCase="2" class="detalle-item">
+      <div class="detalle-imagen">
+        <img src="assets/apidra.jpg" alt="Insulina Apidra">
+      </div>
+      <div class="detalle-info">
+        <h1>Insulina Apidra</h1>
+        <p class="precio">$11.00</p>
+        <div class="cantidad">
+          <label>Cantidad:</label>
+          <input type="number" min="1" [(ngModel)]="selectedQty">
+        </div>
+        <button class="btn-naranja" (click)="addToCart()" [disabled]="added">
+          {{ added ? 'Agregado' : 'Añadir al carrito' }}
+        </button>
+        <div class="descripcion">
+          <h3>Descripción</h3>
+          <p>
+            Insulina de acción rápida que ayuda a controlar los niveles de glucosa en sangre.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div *ngSwitchCase="24" class="detalle-item">
+      <div class="detalle-imagen">
+        <img src="assets/tienda/golosinas/duraznos.png" alt="Mermelada Helios Durazno">
+      </div>
+      <div class="detalle-info">
+        <h1>Mermelada Helios Durazno</h1>
+        <p class="precio">$3.70</p>
+        <div class="cantidad">
+          <label>Cantidad:</label>
+          <input type="number" min="1" [(ngModel)]="selectedQty">
+        </div>
+        <button class="btn-naranja" (click)="addToCart()" [disabled]="added">
+          {{ added ? 'Agregado' : 'Añadir al carrito' }}
+        </button>
+        <div class="descripcion">
+          <h3>Descripción</h3>
+          <p>
+            Mermelada de durazno sin gluten, ideal para desayunos saludables.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agrega más casos ID aquí usando la misma estructura -->
+    
+    <!-- Default si no hay coincidencia -->
+    <div *ngSwitchDefault>
+      <p>Producto no encontrado. ID: {{ id }}</p>
+    </div>
+  </div>
+</ng-container>
+
+
+
+
+
+
+
+
+<div class="container mt-4 position-relative">
+  <button class="custom-arrow custom-prev" onclick="$('.empresas-carousel').slick('slickPrev')">&lt;</button>
+  <div class="slick-carousel empresas-carousel">
+      <div><img src="assets/empresas/club.png" class="empresas-img" alt="Imagen 1"></div>
+      <div><img src="assets/empresas/federacion.png" class="empresas-img" alt="Imagen 2"></div>
+      <div><img src="assets/empresas/insulin.png" class="empresas-img" alt="Imagen 3"></div>
+      <div><img src="assets/empresas/lapa.png" class="empresas-img" alt="Imagen 4"></div>
+      <div><img src="assets/empresas/life.png" class="empresas-img" alt="Imagen 5"></div>
+      <div><img src="assets/empresas/renarec.png" class="empresas-img" alt="Imagen 6"></div>
+      <div><img src="assets/empresas/Ucatolica.png" class="empresas-img" alt="Imagen 7"></div>
+      <div><img src="assets/empresas/UCuenca.png" class="empresas-img" alt="Imagen 8"></div>
+      <div><img src="assets/empresas/redcap.png" class="empresas-img" alt="Imagen 9"></div>
+  </div>
+  <button class="custom-arrow custom-next" onclick="$('.empresas-carousel').slick('slickNext')">&gt;</button>
+</div>
+
+<!-- ICONOS DE REDES SOCIALES -->
+<div class="social-bar">
+  <a href="https://www.tiktok.com/@casadeladiabetes" target="_blank" class="social-icon">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
+  <a href="https://www.facebook.com/CasaDeDiabetes" target="_blank" class="social-icon">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+  <a href="https://www.instagram.com/casadeladiabetes/" target="_blank" class="social-icon">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="https://x.com/CasaDeDiabetes" target="_blank" class="social-icon">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+  <a href="https://www.youtube.com/channel/UC1YqPCb6B9XO6dHkYYXpIrg" target="_blank" class="social-icon">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
+</div>

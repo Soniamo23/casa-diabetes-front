@@ -1,0 +1,176 @@
+
+.findrisk-outer-container {
+  background-color: #0e62ab; 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.findrisk-container {
+  width: 100%;
+  max-width: 700px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px 20px;
+  position: relative;
+}
+
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: normal;
+  color: #000;
+}
+
+
+.font-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.font-size-control {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 12px;
+  &:nth-child(2) {
+    font-size: 14px;
+  }
+  &:nth-child(3) {
+    font-size: 16px;
+  }
+}
+
+
+.form-group {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.required-field {
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  height: 28px;
+  font-size: 14px;
+}
+
+
+.radio-options {
+  margin: 8px 0;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  
+  input[type="radio"] {
+    margin-right: 8px;
+  }
+  
+  label {
+    display: inline;
+    margin: 0;
+  }
+}
+
+
+.note-text {
+  font-size: 12px;
+  color: #333;
+  margin: 5px 0;
+  font-style: italic;
+}
+
+
+.reset-link {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  font-size: 12px;
+  color: #0e62ab;
+  text-decoration: none;
+  cursor: pointer;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+#imc, #puntaje {
+  background-color: #f9f9f9;
+}
+
+.puntaje-input {
+  width: 50px !important;
+  text-align: center;
+  color: #333;
+}
+
+
+.resultado {
+  margin: 15px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.form-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.submit-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #e0e0e0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .findrisk-container {
+    padding: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .reset-link {
+    position: static;
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,676 @@
+/* ==== Reglas Generales para Mejorar la Responsividad ==== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita scroll horizontal */
+  font-family: Arial, sans-serif;
+}
+
+.btn, .btn-primary, .btn-ver-mas, .reserve-btn, .visit-button {
+  cursor: pointer;
+}
+
+/* ==== Sección Actividades ==== */
+.activities-section {
+  position: relative;
+  padding: 20px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1D428C;
+  font-weight: 600;
+  position: relative; /* Asegúrate de que el contenedor sea relativo */
+}
+
+.section-title::before { /* Cambia ::after a ::before para que la flecha esté antes del texto */
+  content: "›"; /* Flecha */
+  color: #FFA500;
+  font-size: 40px;
+  position: absolute; /* Posición absoluta */
+  left: 500px; /* Ajusta este valor para mover la flecha más cerca o más lejos del título */
+  top: 50%; /* Centra verticalmente */
+  transform: translateY(-50%); /* Ajusta para centrar verticalmente */
+  line-height: 1; /* Asegúrate de que la línea esté alineada */
+}
+
+/* Contenedor del carrusel */
+.slick-carousel-container {
+  position: relative;
+  padding: 0 40px; /* Espacio aumentado para las flechas */
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+.activities-carousel {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Modificación principal: Tarjetas más rectangulares */
+.activity-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 20px; /* Aumenta el margen horizontal */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 20px);
+  min-height: 400px; /* Aumentado a 400px para hacerlas más rectangulares */
+  width: calc(33.333% - 40px); /* Cada tarjeta ocupa 1/3 del ancho menos los márgenes */
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.activity-card img {
+  width: 100%;
+  height: 220px; /* Aumentado a 220px para hacer la imagen más alta */
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card-info {
+  padding: 15px 5px; /* Aumentado el padding vertical de 10px a 15px */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.activity-title {
+  font-size: 14px;
+  margin: 0 0 15px 0; /* Aumentado el margen inferior de 10px a 15px */
+  line-height: 1.3;
+  font-weight: 500;
+  color: #333;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 8px 14px; /* Aumentado ligeramente el padding */
+  background-color: #DD7D00;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+  border: none;
+  font-size: 13px;
+}
+
+.btn-primary:hover {
+  background-color: #C56C00;
+}
+
+.btn-ver-mas {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #1D428C;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+  border: none;
+}
+
+.btn-ver-mas:hover {
+  background-color: #153069;
+}
+
+/* Flechas del carrusel - sin círculo */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100; /* Incrementar para asegurar que esté por encima */
+  background: transparent;
+  color: #1D428C;
+  font-size: 40px;
+  width: 50px;
+  height: 50px; /* Aumentar altura para área clicable */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+  user-select: none; /* Evitar selección del texto */
+  pointer-events: auto; /* Asegura que capture clics */
+}
+
+.custom-arrow:hover {
+  color: #DD7D00;
+}
+
+.custom-prev {
+  left: -10px;
+}
+
+.custom-next {
+  right: -10px;
+}
+
+/* Puntos de navegación */
+.slick-dots {
+  position: relative;
+  bottom: 0;
+  padding: 0;
+  margin: 15px 0;
+  list-style: none;
+  text-align: center;
+}
+
+/* Estilos responsivos mejorados */
+@media (max-width: 992px) {
+  .activity-card {
+    width: calc(50% - 40px); /* En tablets, 2 tarjetas por fila */
+    min-height: 370px; /* Mantiene la proporción rectangular */
+  }
+  
+  .slick-carousel-container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slick-carousel-container {
+    padding: 0 45px; /* Aumentado para dar más espacio a las flechas */
+  }
+  
+  .activity-card {
+    width: calc(100% - 30px); /* En móviles, 1 tarjeta por fila */
+    min-height: 350px; /* Mantiene la proporción rectangular */
+    margin: 10px 15px;
+  }
+  
+  .custom-arrow {
+    font-size: 30px; /* Aumentado para mejor toque en móviles */
+  }
+  
+  .custom-prev {
+    left: 5px; /* Ajustado para móviles */
+  }
+
+  .custom-next {
+    right: 5px; /* Ajustado para móviles */
+  }
+  
+  .activity-card img {
+    height: 200px; /* Ajustado para móviles */
+  }
+}
+
+@media (max-width: 576px) {
+  .slick-carousel-container {
+    padding: 0 50px; /* Aumentado a 50px para dar más espacio a las flechas */
+    max-width: 100%; /* Usar todo el ancho disponible */
+  }
+  
+  .activity-card {
+    min-height: 320px; /* Ajustado para móviles pequeños */
+    padding: 10px;
+    margin: 10px 5px; /* Reducido margen horizontal */
+    width: calc(100% - 10px); /* Asegura que la tarjeta ocupe todo el ancho disponible */
+  }
+  
+  .card-info {
+    padding: 10px 5px; /* Ajustado */
+  }
+  
+  .activity-title {
+    font-size: 13px;
+    margin-bottom: 10px; /* Ajustado */
+  }
+  
+  .btn-primary {
+    padding: 6px 12px; /* Ajustado */
+    font-size: 12px;
+  }
+  
+  .custom-prev {
+    left: 10px; /* Ajustado para móviles pequeños */
+  }
+
+  .custom-next {
+    right: 10px; /* Ajustado para móviles pequeños */
+  }
+  
+  .custom-arrow {
+    font-size: 24px; /* Reducido ligeramente pero manteniendo buen tamaño táctil */
+  }
+  
+  .section-title::before {
+    left: 70px; /* Ajusta la posición de la flecha en pantallas más pequeñas */
+    font-size: 40px;
+  }
+}
+
+/* ==== Sección Centro Médico ==== */
+.medical-center {
+  background-color: #1D428C;
+  padding: 50px 20px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.medical-title {
+  font-size: clamp(28px, 5vw, 34px);
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 400px;
+  align-self: flex-start;
+}
+
+.medical-title::before {
+  content: "›"; /* Flecha */
+  color: #FFA500;
+  font-size: 40px;
+  position: absolute; /* Posición absoluta */
+  left: 370px; /* Ajusta este valor para mover la flecha más cerca o más lejos del título */
+  top: 50%; /* Centra verticalmente */
+  transform: translateY(-50%); /* Ajusta para centrar verticalmente */
+  line-height: 1; /* Asegúrate de que la línea esté alineada */
+}
+
+.medical-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.medical-logo {
+  flex: 0 0 auto;
+  max-width: 180px;
+  height: auto;
+  margin-right: 30px;
+}
+
+.medical-info {
+  flex: 1;
+  text-align: left;
+}
+
+.medical-info h3 {
+  font-size: clamp(22px, 3vw, 28px);
+  color: #1D428C;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.medical-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.medical-info ul li {
+  position: relative;
+  padding-left: 1.2em;
+  margin-bottom: 8px;
+  font-size: clamp(14px, 2vw, 18px);
+  color: #1D428C;
+  line-height: 1.3;
+}
+
+.medical-info ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FFA500;
+  font-size: 1.2em;
+}
+
+.btn-wrapper {
+  text-align: center;
+  width: 100%;
+}
+
+.reserve-btn {
+  display: inline-block;
+  background-color: #00AEEF;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.reserve-btn:hover {
+  background-color: #0090C5;
+}
+
+/* ==== Sección Registro de Pacientes y Programas ==== */
+.patients-and-programs {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 40px 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.registration-section, .training-section {
+  width: 45%;
+  max-width: 520px;
+}
+
+.patients-and-programs .section-title {
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1D428C;
+  text-align: left;
+  position: relative; /* Asegúrate de que el contenedor sea relativo */
+}
+
+.patients-and-programs .section-title::before {
+  content: "›"; /* Flecha */
+  color: #FFA500;
+  font-size: 40px;
+  position: absolute;
+  left: -50px; /* Ajusta según sea necesario */
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px; /* Espacio entre la flecha y el título */
+}
+
+.registration-section p {
+  text-align: justify; /* Justifica el texto */
+  color: #1D428C; /* Color celeste */
+}
+
+.registration-image {
+  width: 100%;
+  max-width: 380px;
+  margin: 15px auto;
+  display: block;
+}
+
+.training-carousel {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.training-item img {
+  width: 100%;
+  max-width: 138px;
+  border-radius: 5px;
+}
+
+.visit-button {
+  display: inline-block;
+  background-color: #FFA500;
+  color: white;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: none;
+  font-size: 16px;
+}
+
+/* ==== Sección Redes Sociales ==== */
+.social-media-section {
+  background-color: #1D428C;
+  padding: 30px 20px;
+  color: #fff;
+  text-align: left; /* Cambiado a izquierda para mejor control */
+  width: 100%;      /* Garantiza ocupar todo el ancho */
+  box-sizing: border-box;
+}
+
+.social-media-section .section-title {
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+  padding-left: 750px; /* Dejar espacio para la flecha */
+  max-width: 100%;
+  box-sizing: border-box;
+  /* text-align corregido, no usar valores inválidos */
+  text-align: left;
+}
+
+.social-media-section .section-title::before {
+  content: "›";
+  color: #FFA500;
+  font-size: 40px;
+  position: absolute;
+  left: 700px;           /* Cerca del texto */
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1;
+  user-select: none;
+  pointer-events: none; /* Que no interfiera con click */
+}
+ @media (max-width: 576px) {
+  .social-media-section {
+    padding: 20px 10px;
+  }
+  .social-media-section .section-title {
+    font-size: 24px;
+    padding-left: 40px;
+  }
+  .social-media-section .section-title::before {
+    font-size: 30px;
+    left: 8px;
+  }
+}
+
+
+.social-container {
+  display: flex; /* Flexbox para el contenedor de redes sociales */
+  justify-content: center; /* Centra los elementos */
+  gap: 20px; /* Espacio entre los elementos */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+}
+
+.social-card {
+  background: white; /* Color de fondo de las tarjetas */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 15px; /* Espaciado interno */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  text-align: center; /* Centra el texto dentro de la tarjeta */
+  overflow: hidden; /* Oculta el desbordamiento */
+  width: 340px; /* Ancho fijo de las tarjetas */
+}
+
+.social-card iframe, .social-card blockquote {
+  width: 100%; /* Ancho completo */
+  height: 500px; /* Altura fija */
+  border: none; /* Sin borde */
+}
+
+/* ==== Barra de Iconos Sociales ==== */
+.social-bar {
+  background-color: #1D428C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 24px;
+  margin: 0 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #FFD700;
+}
+
+/* ==== Media Queries ==== */
+@media (max-width: 992px) {
+  .patients-and-programs {
+    flex-direction: column;
+    align-items: center;
+  }
+  .registration-section, .training-section {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+  .medical-title{
+    font-size: 25px;
+    margin-bottom: 50px;
+    padding-left: 80px;
+    
+  }
+  .medical-title::before{
+    left: 60px; /* Ajusta la posición de la flecha en pantallas más pequeñas */
+    font-size: 40px; /* Reduce el tamaño de la flecha */
+  }
+}
+
+@media (max-width: 768px) {
+  .medical-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .medical-logo {
+    margin: 0 0 15px;
+    max-width: 130px;
+  }
+  .social-card {
+    max-width: 90%;
+  }
+  .social-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .custom-prev, .custom-next {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .medical-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .medical-logo {
+    margin: 0 0 20px 0;
+  }
+
+  .registration-section, .training-section {
+    width: 100%;
+  }
+  .patients-and-programs .section-title{
+    font-size: 20px;
+    margin-bottom: 50px;
+    padding-left: 80px;
+  }
+  .patients-and-programs .section-title::before{
+    left: 30px; /* Ajusta la posición de la flecha en pantallas más pequeñas */
+    font-size: 40px; /* Reduce el tamaño de la flecha */
+  }
+}
+
+/* ====== CARRUSEL DE EMPRESAS ====== */
+.empresas-carousel {
+  position: relative;
+  margin: 60px auto !important;
+  overflow: hidden !important;
+  width: 60%;
+}
+
+.empresas-img {
+  max-height: 40px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Flechas personalizadas */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+  color: #0047AB; /* Color azul para las flechas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 40px; /* Tamaño grande para las flechas */
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 0;
+  border-radius: 50%; /* Hacer las flechas redondas */
+}
+
+.custom-arrow:hover {
+  color: #002D72; /* Azul más oscuro al pasar el cursor */
+}
+
+.custom-prev {
+  left: 10px; /* Ajusta la posición de la flecha izquierda */
+}
+
+.custom-next {
+  right: 10px; /* Ajusta la posición de la flecha derecha */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .empresas-carousel {
+    width: 100% !important; /* Hacer que el carrusel ocupe el 100% en pantallas pequeñas */
+  }
+
+  .custom-arrow {
+    font-size: 30px; /* Reducir el tamaño de las flechas en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-arrow {
+    font-size: 24px; /* Ajustar aún más el tamaño de las flechas en móviles */
+  }
+}

@@ -1,0 +1,640 @@
+/* Estilos Generales */
+.educational-material-container {
+    max-width: 1000px; /* más ancho para acomodar los íconos en línea */
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: white;
+  }
+
+h1 {
+    color: #1d428c; /* azul oscuro */
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.navigation-icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.nav-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-icon-circle {
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: #009cde;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-icon i {
+    font-size: 30px;
+    color: white;
+}
+
+.nav-icon span {
+    color: #000000; /* Negro puro */
+    font-size: 14px;
+    font-weight: bold; /* Hacer el texto más grueso para que se vea más negro */
+}
+
+.nav-icon.active .nav-icon-circle {
+    background-color: #3e9acd; /* Un azul más oscuro para estado activo */
+}
+
+.nav-icon.active span {
+    text-decoration: underline; /* Añadir subrayado */
+    text-decoration-color: orange; /* Color de la rayita */
+    text-underline-offset: 3px; /* Espaciado entre el texto y la rayita */
+    text-decoration-thickness: 3px; /* Grosor de la rayita */
+}
+
+/* Estilo para los enlaces */
+.content-card a {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #0E76A8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.content-card a:hover {
+    background-color: #065580;
+}
+
+
+
+/* Estilos para la sección de Juegos */
+
+/* Estilo general de la sección de juegos */
+.game-section {
+    background-color: #0F3C90;
+    padding: 2rem;
+    border-radius: 12px;
+    color: #fff;
+  }
+  
+  
+  /* Título de la sección */
+  .game-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  /* Grid de juegos */
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 2fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 999px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  
+  
+  
+  /* Tarjetas individuales de juegos */
+  .content-card-game {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 1rem;
+    max-width: 300px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  
+  
+  .content-card-game:hover {
+    transform: translateY(-5px);
+  }
+  
+  .content-card-game img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .content-card-game h3 {
+    font-size: 18px;
+    margin-bottom: 0.8rem;
+    color: #202020;
+    max-width: 300px;
+    box-sizing: border-box;
+
+  }
+  
+  .content-card-game a {
+    display: inline-block;
+    background-color: #FFD100;
+    color: #202020;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .content-card-game a:hover {
+    background-color: #FFEE32;
+  }
+  
+  
+
+/* Estilos para la sección de Videos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content-section {
+    width: 99vw;
+    background-color: #1D428C; /* Color azul correcto como en la imagen */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 150px 0;
+    box-sizing: border-box;
+}
+
+.content-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-section h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-grid-videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.content-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.content-card:hover {
+    transform: scale(1.02);
+}
+
+.content-card iframe {
+    width: 100%;
+    height: 250px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .content-grid-videos {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+/* Navegación superior con íconos */
+.nav-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #0096c7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.icon-circle i {
+    color: white;
+    font-size: 24px;
+}
+
+.nav-icon span {
+    color: #333;
+    font-size: 14px;
+}
+
+.nav-icon.active span {
+    color: #0096c7;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .content-grid-videos {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-icons {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+ /* Estilos para la sección de descargables */
+ .downloadable-section {
+    width: 99vw;
+    margin: 0;
+    padding: 20px 0;
+    background-color: #1e4388; /* Fondo azul oscuro */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-sizing: border-box;
+}
+
+.download-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
+
+.download-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.download-item h3 {
+    color: #00a3e0;
+    font-size: 18px;
+    margin: 0;
+}
+
+.download-btn {
+    background-color: #f8b133; /* Color naranja del botón */
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #e79d1e;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .download-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 15px 10px;
+    }
+}
+
+
+
+
+
+
+
+/* Estilos para la sección de Flipbooks */
+
+/* Estilo para el contenedor de las tarjetas */
+.content-grid-flipbooks {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 tarjetas por fila */
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 20px; /* Espacio interno del contenedor */
+    justify-content: center; /* Centrar las tarjetas en el contenedor */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+}
+
+/* Estilo para cada tarjeta */
+.content-card-flipbook {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: white; /* Fondo blanco para las tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transición suave */
+    height: 170px; /* Altura fija para las tarjetas */
+}
+
+/* Efecto al pasar el mouse */
+.content-card-flipbook:hover {
+    background-color: rgba(137, 144, 152, 0.8); /* Color azul oscuro al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el mouse */
+}
+
+/* Estilo para la imagen */
+.content-card-flipbook img {
+    width: 100%; /* Ajusta el ancho al 100% de su contenedor */
+    height: 100%; /* Establece una altura fija para hacerlas cuadradas */
+    object-fit: cover; /* Cubre el contenedor y recorta la imagen si es necesario */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+    transition: opacity 0.3s ease; /* Transición suave para el efecto */
+}
+
+/* Estilo para el título */
+.card-title {
+    text-align: center; /* Centrar el texto del título */
+    color: #fff; /* Color del texto en blanco */
+    padding: 12px 8px; /* Espaciado interno del título */
+    font-weight: 600; /* Negrita para el título */
+    font-size: 16px; /* Tamaño de fuente del título */
+    background-color: transparent; /* Fondo transparente para el título */
+    border-radius: 0 0 8px 8px; /* Bordes redondeados en la parte inferior */
+}
+
+/* Emoji y mensaje ocultos por defecto */
+.card-title::after {
+    content: " 👆 Ir al cuento"; /* Emoji de la mano y mensaje */
+    display: none; /* Oculto por defecto */
+    font-size: 16px; /* Tamaño de fuente del mensaje */
+}
+
+/* Mostrar emoji y mensaje al pasar el mouse */
+.content-card-flipbook:hover .card-title::after {
+    display: inline; /* Mostrar el mensaje al pasar el mouse */
+}
+
+/* Responsivo */
+@media (max-width: 1200px) {
+    .content-grid-flipbooks {
+        grid-template-columns: repeat(3, 1fr); /* 3 tarjetas por fila en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 992px) {
+    .content-grid-flipbooks {
+        grid-template-columns: repeat(2, 1fr); /* 2 tarjetas por fila en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .content-grid-flipbooks {
+        grid-template-columns: 1fr; /* 1 tarjeta por fila en pantallas muy pequeñas */
+    }
+}
+
+
+
+
+.empresas-carousel {
+    position: relative;
+    margin: 60px auto !important;
+    overflow: hidden !important;
+    width: 60%;
+  }
+  
+  .empresas-img {
+    max-height: 40px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    background: none;
+    color: #0047AB; /* Color azul para las flechas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 40px; /* Tamaño grande para las flechas */
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+  
+  .custom-arrow:hover {
+    color: #002D72; /* Azul más oscuro al pasar el cursor */
+  }
+  
+  .custom-prev {
+    left: 180px; /* Ajusta la posición de la flecha izquierda */
+  }
+  
+  .custom-next {
+    right: 180px; /* Ajusta la posición de la flecha derecha */
+  }
+  
+  
+  
+  /* 🔹 Barra azul para las redes sociales */
+  .social-bar {
+    background-color: #1d428c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0; /* Elimina márgenes */
+    width: 100%; /* Asegúrate de que el ancho sea del 100% */
+    position: relative; /* Asegúrate de que no haya problemas de posicionamiento */
+    left: 0; /* Asegúrate de que esté alineado a la izquierda */
+    right: 0; /* Asegúrate de que esté alineado a la derecha */
+  }
+  
+  /* 🔹 Estilos para los iconos */
+  .social-icon {
+    color: white;
+    font-size: 24px;
+    margin: 0 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+    color: #FFD700; /* Amarillo dorado al pasar el mouse */
+  }
+  
+  
+
+
+ /* === RESPONSIVE GLOBAL === */
+ /* === Entre 576px y 992px: pirámide de íconos y 2–2–3 grid === */
+@media (max-width: 992px) {
+
+    /* 1) Íconos en pirámide 3 arriba / 2 abajo */
+    .navigation-icons {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center; /* centra filas */
+        gap: 20px;
+      }
+      .nav-icon {
+        /* Cada icono ocupa 30% del ancho contenedor menos gaps */
+        flex: 0 0 calc(33.333% - 20px);
+        max-width: calc(33.333% - 20px);
+        text-align: center;
+      }
+  
+    /* 2) Juegos: de 3 a 2 tarjetas por fila */
+    .content-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 1rem !important;
+    }
+    .content-card-game {
+      max-width: none !important;
+    }
+  
+    /* 3) Videos: ya tenías bien, pero por si acaso */
+    .content-grid-videos {
+      grid-template-columns: 1fr !important;
+    }
+  
+    /* 4) Flipbooks: de 4 a 3 tarjetas */
+    .content-grid-flipbooks {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  
+    /* 5) Descargables: de 1 columna única a 2 columnas */
+    .download-container {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 1rem !important;
+    }
+  
+    /* 6) Podcasts: de 3 a 2 ítems */
+    .spotify-container {
+      width: 48% !important;
+      margin: 0 1% 1rem !important;
+    }
+  
+    /* 7) Carrusel full width */
+    .empresas-carousel {
+      width: 100% !important;
+    }
+    .custom-prev { left: 10px; }
+    .custom-next { right: 10px; }
+  
+    /* 8) Social bar: wrap y gaps */
+    .social-bar {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .social-icon {
+      font-size: 20px;
+      margin: 5px;
+    }
+  
+  }
+  
+  
+  /* === Móvil extremo (≤576px): TODO apilado 1×1 === */
+  @media (max-width: 576px) {
+  
+    /* Íconos 1 por fila */
+    navigation-icons {
+        display: flex !important;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .nav-icon {
+        flex: 0 0 auto;
+        max-width: 100%;
+      }
+  
+    /* Juegos: 1 tarjeta por fila */
+    .content-grid {
+      grid-template-columns: 1fr !important;
+    }
+  
+    /* Videos: 1 iframe full width */
+    .content-grid-videos {
+      grid-template-columns: 1fr !important;
+    }
+  
+    /* Flipbooks: 1 tarjeta */
+    .content-grid-flipbooks {
+      grid-template-columns: 1fr !important;
+    }
+  
+    /* Descargables: 1 item */
+    .download-container {
+      grid-template-columns: 1fr !important;
+    }
+  
+    /* Podcasts: cada iframe ocupa 100% */
+    .spotify-container {
+      width: 100% !important;
+      margin-bottom: 1rem !important;
+    }
+  
+    /* Carrusel full */
+    .empresas-carousel {
+      width: 100% !important;
+    }
+  
+    /* Titulares algo más pequeños */
+    h1, .game-section h2, .content-section h2 {
+      font-size: 1.5rem !important;
+      margin-bottom: 1rem !important;
+    }
+  
+  }
+  

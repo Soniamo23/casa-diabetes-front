@@ -1,0 +1,265 @@
+<!-- ENCABEZADO DE TIENDA -->
+<div class="titulo-tienda-container">
+    <div class="titulo-tienda">
+      <div class="arrow-icon">&#10095;</div>
+      <h2>Tienda</h2>
+    </div>
+  </div>
+<!-- tienda.component.html -->
+<div class="tienda-container">
+
+
+    
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h3>Filtro</h3>
+  
+      <!-- 🔹 SLIDER ÚNICO DE PRECIO -->
+      
+<div class="price-slider">
+  <input
+    type="range"
+    id="priceRangeMin"
+    min="0"
+    max="40"
+    step="0.1"
+    [(ngModel)]="precioMin"
+  >
+  <div class="price-labels">
+    <span>${{ precioMin.toFixed(2) }}</span>
+    <span>$40.00</span>
+  </div>
+  <div class="price-labels">
+    <span>Desde</span>
+    <span>Hasta</span>
+  </div>
+</div>
+
+  
+      <h3>Categorías del producto</h3>
+      <div class="categorias">
+        <div>
+          <input
+            type="checkbox"
+            (change)="toggleCategoria('INSUMOS DE CONTROL')"
+            [checked]="categoriasSeleccionadas.includes('INSUMOS DE CONTROL')"
+          >
+          INSUMOS DE CONTROL
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            (change)="toggleCategoria('GOLOSINAS')"
+            [checked]="categoriasSeleccionadas.includes('GOLOSINAS')"
+          >
+          GOLOSINAS
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            (change)="toggleCategoria('INSULINAS')"
+            [checked]="categoriasSeleccionadas.includes('INSULINAS')"
+          >
+          INSULINAS
+        </div>
+      </div>
+  
+      <!-- BUSCADOR -->
+      <h3>Buscar producto</h3>
+      <input
+        type="text"
+        placeholder="Escribe el nombre..."
+        [(ngModel)]="busqueda"
+        class="buscador"
+      >
+      <button (click)="reinicializarFiltros()" class="btn-reiniciar">
+        🔄 Re-inicializar
+      </button>
+    </div>
+    <!-- Botón de reinicializar -->
+
+
+
+  
+    <!-- PRODUCTOS 1-15-->
+    <div class="productos-grid">
+  
+      <!-- INSULINAS -->
+      <div *ngIf="cumpleFiltro('INSULINAS', 11.90, 'Humalog Mix')" class="producto-card">
+        <div class="imagen-container">
+          <img src="assets/humalog.jpg" alt="Humalog Mix">
+        </div>
+        <h3>Humalog Mix</h3>
+        <p class="precio">$11.90</p>
+        <button class="btn-naranja" [routerLink]="['/detalle-producto', 1]">Leer más</button>
+      </div>
+  
+      <div *ngIf="cumpleFiltro('INSULINAS', 11.00, 'Insulina Apidra')" class="producto-card">
+        <div class="imagen-container">
+          <img src="assets/apidra.jpg" alt="Insulina Apidra">
+        </div>
+        <h3>Insulina Apidra</h3>
+        <p class="precio">$11.00</p>
+        <button class="btn-naranja" [routerLink]="['/detalle-producto', 2]">Leer más</button>
+      </div>
+  
+      <div *ngIf="cumpleFiltro('INSULINAS', 38.90, 'Insulina Lantus Vial')" class="producto-card">
+        <div class="imagen-container">
+          <img src="assets/lantus.jpg" alt="Insulina Lantus Vial">
+        </div>
+        <h3>Insulina Lantus Vial</h3>
+        <p class="precio">$38.90</p>
+        <button class="btn-naranja" [routerLink]="['/detalle-producto', 3]">Leer más</button>
+      </div>
+  
+      <div *ngIf="cumpleFiltro('INSULINAS', 12.30, 'Lantus Pen')" class="producto-card">
+        <div class="imagen-container">
+          <img src="assets/lantus-pen.jpg" alt="Lantus Pen">
+        </div>
+        <h3>Lantus Pen</h3>
+        <p class="precio">$12.30</p>
+        <button class="btn-naranja" [routerLink]="['/detalle-producto', 4]">Leer más</button>
+      </div>
+  
+      <!-- INSUMOS DE CONTROL 16-25-->
+      <div *ngIf="cumpleFiltro('INSUMOS DE CONTROL', 2.50, 'Jeringas 30')" class="producto-card">
+        <div class="imagen-container">
+          <img src="assets/tienda/insumoscontrol/jeringas30.png" alt="Jeringas 30">
+        </div>
+        <h3>Jeringas 30</h3>
+        <p class="precio">$2.50</p>
+        <button class="btn-naranja" [routerLink]="['/detalle-producto', 16]">Leer más</button>
+      </div>
+  
+      <div *ngIf="cumpleFiltro('INSUMOS DE CONTROL', 2.50, 'Jeringas 50')" class="producto-card">
+        <div class="imagen-container">
+          <img src="assets/tienda/insumoscontrol/jeringas50.png" alt="Jeringas 50">
+        </div>
+        <h3>Jeringas 50</h3>
+        <p class="precio">$2.50</p>
+        <button class="btn-naranja" [routerLink]="['/detalle-producto', 17]">Leer más</button>
+      </div>
+  
+      <div *ngIf="cumpleFiltro('INSUMOS DE CONTROL', 0.20, 'Lancetas Accu-Chek Softclix')" class="producto-card">
+        <div class="imagen-container">
+          <img src="assets/tienda/insumoscontrol/lancetassoftclix.png" alt="Lancetas Accu-Chek Softclix">
+        </div>
+        <h3>Lancetas Accu-Chek Softclix</h3>
+        <p class="precio">$0.20</p>
+        <button class="btn-naranja" [routerLink]="['/detalle-producto', 18]">Leer más</button>
+      </div>
+  
+      <div *ngIf="cumpleFiltro('INSUMOS DE CONTROL', 0.20, 'Lancetas Safe T-Pro desechable')" class="producto-card">
+        <div class="imagen-container">
+          <img src="assets/tienda/insumoscontrol/lancetasdesechables.png" alt="Lancetas Safe T-Pro desechable">
+        </div>
+        <h3>Lancetas Safe T-Pro desechable</h3>
+        <p class="precio">$0.20</p>
+        <button class="btn-naranja" [routerLink]="['/detalle-producto', 19]">Leer más</button>
+      </div>
+  
+      <div *ngIf="cumpleFiltro('INSUMOS DE CONTROL', 0.20, 'Agujas Para Pen')" class="producto-card">
+        <div class="imagen-container">
+          <img src="assets/tienda/insumoscontrol/agujasparapen.png" alt="Agujas Para Pen">
+        </div>
+        <h3>Agujas Para Pen</h3>
+        <p class="precio">$0.20</p>
+        <button class="btn-naranja" [routerLink]="['/detalle-producto', 20]">Leer más</button>
+      </div>
+  
+      <div *ngIf="cumpleFiltro('INSUMOS DE CONTROL', 21.00, 'Caja de Jeringas 30x100')" class="producto-card">
+        <div class="imagen-container">
+          <img src="assets/tienda/insumoscontrol/jeringas30x100.png" alt="Caja de Jeringas 30x100">
+        </div>
+        <h3>Caja de Jeringas 30x100</h3>
+        <p class="precio">$21.00</p>
+        <button class="btn-naranja" [routerLink]="['/detalle-producto', 21]">Leer más</button>
+      </div>
+  
+      <div *ngIf="cumpleFiltro('INSUMOS DE CONTROL', 21.00, 'Caja de Jeringas 50x100')" class="producto-card">
+        <div class="imagen-container">
+          <img src="assets/tienda/insumoscontrol/jeringas50x100.png" alt="Caja de Jeringas 50x100">
+        </div>
+        <h3>Caja de Jeringas 50x100</h3>
+        <p class="precio">$21.00</p>
+        <button class="btn-naranja" [routerLink]="['/detalle-producto', 22]">Leer más</button>
+      </div>
+  
+      <div *ngIf="cumpleFiltro('INSUMOS DE CONTROL', 35.00, 'Glucometro Accu-Chek Guide')" class="producto-card">
+        <div class="imagen-container">
+          <img src="assets/tienda/insumoscontrol/glucometroguide.png" alt="Glucometro Accu-Chek Guide">
+        </div>
+        <h3>Glucometro Accu-Chek Guide</h3>
+        <p class="precio">$35.00</p>
+        <button class="btn-naranja" [routerLink]="['/detalle-producto', 23]">Leer más</button>
+      </div>
+  
+      <!-- GOLOSINAS 26-35-->
+      <div *ngIf="cumpleFiltro('GOLOSINAS', 3.70, 'Mermelada Helios Durazno')" class="producto-card">
+        <div class="imagen-container">
+          <img src="assets/mermelada.jpg" alt="Mermelada Helios Durazno">
+        </div>
+        <h3>Mermelada Helios Durazno</h3>
+        <p class="precio">$3.70</p>
+        <button class="btn-naranja" [routerLink]="['/detalle-producto', 24]">Leer más</button>
+      </div>
+  
+    </div> <!-- fin productos-grid -->
+  </div> <!-- fin tienda-container -->
+  
+  <!-- PAGINACIÓN -->
+  <div class="paginacion">
+    <button [ngClass]="{'active': paginaActual === 1}" (click)="cambiarPagina(1)">1</button>
+    <button [ngClass]="{'active': paginaActual === 2}" (click)="cambiarPagina(2)">2</button>
+    <button [ngClass]="{'active': paginaActual === 3}" (click)="cambiarPagina(3)">3</button>
+    <button class="active-orange" (click)="cambiarPagina(paginaActual + 1)">»</button>
+    <button (click)="cambiarPagina(4)">4</button>
+    <button (click)="cambiarPagina(5)">5</button>
+    <button (click)="cambiarPagina(6)">»</button>
+  </div>
+  
+
+
+
+
+
+
+
+
+  
+  <!-- CARRUSEL DE IMÁGENES -->
+  <div class="container mt-4 position-relative">
+    <button class="custom-arrow custom-prev" onclick="$('.empresas-carousel').slick('slickPrev')">&lt;</button>
+    <div class="slick-carousel empresas-carousel">
+      <div><img src="assets/empresas/club.png" class="empresas-img" alt="Imagen 1"></div>
+      <div><img src="assets/empresas/federacion.png" class="empresas-img" alt="Imagen 2"></div>
+      <div><img src="assets/empresas/insulin.png" class="empresas-img" alt="Imagen 3"></div>
+      <div><img src="assets/empresas/lapa.png" class="empresas-img" alt="Imagen 4"></div>
+      <div><img src="assets/empresas/life.png" class="empresas-img" alt="Imagen 5"></div>
+      <div><img src="assets/empresas/renarec.png" class="empresas-img" alt="Imagen 6"></div>
+      <div><img src="assets/empresas/Ucatolica.png" class="empresas-img" alt="Imagen 7"></div>
+      <div><img src="assets/empresas/UCuenca.png" class="empresas-img" alt="Imagen 8"></div>
+      <div><img src="assets/empresas/redcap.png" class="empresas-img" alt="Imagen 9"></div>
+    </div>
+    <button class="custom-arrow custom-next" onclick="$('.empresas-carousel').slick('slickNext')">&gt;</button>
+  </div>
+  
+  <!-- ICONOS DE REDES SOCIALES -->
+  <div class="social-bar">
+    <a href="https://www.tiktok.com/@casadeladiabetes" target="_blank" class="social-icon">
+      <i class="fa-brands fa-tiktok"></i>
+    </a>
+    <a href="https://www.facebook.com/CasaDeDiabetes" target="_blank" class="social-icon">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/casadeladiabetes/" target="_blank" class="social-icon">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://x.com/CasaDeDiabetes" target="_blank" class="social-icon">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+    <a href="https://www.youtube.com/channel/UC1YqPCb6B9XO6dHkYYXpIrg" target="_blank" class="social-icon">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+  </div>
+  

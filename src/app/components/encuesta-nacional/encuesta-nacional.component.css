@@ -1,0 +1,215 @@
+/* Estilos base */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en pantallas pequeñas */
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  cursor: pointer;
+  width: 320px;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1rem; /* Espacio inferior para cuando se apilan */
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #f2a800;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.detail-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 0 15px; /* Padding para pantallas pequeñas */
+}
+
+.detail-container button {
+  margin-bottom: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Contenedor general para controlar todo el bloque */
+.partners-section {
+  margin-top: 80px; /* Espacio superior reducido para móviles */
+}
+
+/* Carrusel */
+.empresas-carousel {
+  margin: 0 auto !important;
+  width: 90%; /* Ancho mayor para móviles */
+  overflow: hidden !important;
+  position: relative;
+}
+
+/* Imagen dentro del carrusel */
+.empresas-img {
+  max-height: 35px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Flechas personalizadas */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: none;
+  color: #1d428c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 30px; /* Tamaño reducido para móviles */
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.custom-arrow:hover {
+  color: #1d428c;
+}
+
+.custom-prev {
+  left: 50px; /* Ligeramente separado del borde */
+}
+
+.custom-next {
+  right: 50px; /* Ligeramente separado del borde */
+}
+
+/* Barra de redes sociales */
+.social-bar {
+  background-color: #1d428c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 30px;
+  flex-wrap: wrap; /* Para que los iconos se envuelvan en pantallas muy pequeñas */
+}
+
+/* Iconos */
+.social-icon {
+  color: white;
+  font-size: 20px; /* Tamaño reducido para móviles */
+  margin: 0 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #FFD700;
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+
+/* Tablets */
+@media (min-width: 768px) {
+  .partners-section {
+    margin-top: 100px;
+  }
+  
+  .empresas-carousel {
+    width: 80%;
+  }
+  
+  .empresas-img {
+    max-height: 38px;
+  }
+  
+  .custom-arrow {
+    font-size: 35px;
+  }
+  
+  .custom-prev {
+    left: 20px;
+  }
+  
+  .custom-next {
+    right: 20px;
+  }
+  
+  .social-icon {
+    font-size: 22px;
+    margin: 0 12px;
+  }
+}
+
+/* Escritorios */
+@media (min-width: 992px) {
+  .partners-section {
+    margin-top: 120px;
+  }
+  
+  .empresas-carousel {
+    width: 70%;
+  }
+  
+  .custom-arrow {
+    font-size: 40px;
+  }
+  
+  .custom-prev {
+    left: 30px;
+  }
+  
+  .custom-next {
+    right: 30px;
+  }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+  .partners-section {
+    margin-top: 150px;
+  }
+  
+  .empresas-carousel {
+    width: 60%;
+  }
+  
+  .empresas-img {
+    max-height: 40px;
+  }
+  
+  .custom-prev {
+    left: 180px;
+  }
+  
+  .custom-next {
+    right: 180px;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+    margin: 0 15px;
+  }
+}
+
+/* Para iframes responsivos */
+iframe {
+  max-width: 100%;
+  border: none;
+}

@@ -1,0 +1,192 @@
+<div class="container text-center mt-4">
+  <a routerLink="/nueva-pagina" (click)="onImageClick()">
+    <img src="assets/magnifico.png" alt="Ir a Nueva Página" class="img-fluid enlace-imagen">
+  </a>
+</div>
+
+<div class="container mt-4 activities-section">
+  <h2 class="section-title">Actividades</h2>
+  
+  <!-- Contenedor del carrusel -->
+  <div class="slick-carousel-container">
+    <!-- Flechas del carrusel posicionadas fuera del carrusel pero dentro del contenedor -->
+    <button class="custom-arrow custom-prev" onclick="$('.activities-carousel').slick('slickPrev')">&lt;</button>
+    
+    <div class="slick-carousel activities-carousel">
+      <div class="activity-card">
+        <img src="assets/Actividadescarrusel/actividad1/carnaval.png" alt="Actividad 1" class="img-fluid">
+        <div class="card-info">
+          <p class="activity-title">Celebramos el carnaval junto a nuestros adultos mayores</p>
+          <a [routerLink]="['/actividad-info', 1]" class="btn btn-primary">Leer más</a>
+        </div>
+      </div>
+      <div class="activity-card">
+        <img src="assets/Actividadescarrusel/actividad2/salud.png" alt="Actividad 2" class="img-fluid">
+        <div class="card-info">
+          <p class="activity-title">Promoviendo la salud en el Club de Personas con Diabetes</p>
+          <a [routerLink]="['/actividad-info', 2]" class="btn btn-primary">Leer más</a>
+        </div>
+      </div>
+      <div class="activity-card">
+        <img src="assets/img3.jpg" alt="Actividad 3" class="img-fluid">
+        <div class="card-info">
+          <p class="activity-title">Magnífica visita a la Unidad Educativa Manuela Cañizares</p>
+          <a [routerLink]="['/actividad-info', 3]" class="btn btn-primary">Leer más</a>
+        </div>
+      </div>
+      <div class="activity-card">
+        <img src="assets/img4.jpg" alt="Actividad 4" class="img-fluid">
+        <div class="card-info">
+          <p class="activity-title">Magnífica visita a la Unidad Educativa Manuela Cañizares</p>
+          <a [routerLink]="['/actividad-info', 4]" class="btn btn-primary">Leer más</a>
+        </div>
+      </div>
+      <div class="activity-card">
+        <img src="assets/img5.jpg" alt="Actividad 5" class="img-fluid">
+        <div class="card-info">
+          <p class="activity-title">Magnífica visita a la Unidad Educativa Manuela Cañizares</p>
+          <a [routerLink]="['/actividad-info', 5]" class="btn btn-primary">Leer más</a>
+        </div>
+      </div>
+    </div>
+    
+    <button class="custom-arrow custom-next" onclick="$('.activities-carousel').slick('slickNext')">&gt;</button>
+  </div>
+
+  <!-- Botón "Ver más" -->
+  <div class="text-center mt-3">
+    <a [routerLink]="['/actividades']" class="btn btn-ver-mas">Ver más</a>
+  </div>
+</div>
+
+<!-- Sección: Centro Médico -->
+<div class="medical-center">
+  <h2 class="medical-title">Centro Médico</h2>
+
+  <div class="medical-card d-flex flex-column flex-md-row align-items-center">
+    <img src="assets/CEMET.png" alt="Logo Centro Médico" class="medical-logo img-fluid">
+    <div class="medical-info">
+      <h3>SERVICIOS</h3>
+      <ul class="list-unstyled">
+        <li>Endocrinología / Endopediatría</li>
+        <li>Educación en Diabetes</li>
+        <li>Pie Diabético / Podología</li>
+        <li>Diabetología</li>
+        <li>Nutrición</li>
+        <li>Psicología</li>
+        <li>Medicina del deporte y Rehabilitación Deportiva</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="btn-wrapper text-center">
+    <a href="https://api.whatsapp.com/send?phone=593988997813" class="reserve-btn btn btn-success">Reserva tu cita</a>
+  </div>
+</div>
+
+<!-- Sección: Registro de Pacientes y Programas -->
+<div class="patients-and-programs d-flex flex-column flex-md-row justify-content-center">
+  <div class="registration-section mb-4 mb-md-0">
+    <h2 class="section-title">
+      <span class="title-text">
+        Registro de pacientes<br>con diabetes tipo 1
+      </span>
+    </h2>
+    <img src="assets/Diabetes 1.png" alt="Registro de pacientes" class="registration-image img-fluid">
+    <p>
+      El Ministerio de Salud Pública del Ecuador y la FUNDACIÓN LOS FRESNOS "Casa de la Diabetes", 
+      están llevando a cabo el registro de pacientes con diabetes tipo I. Con esta información, 
+      podemos seguir trabajando en pro de la búsqueda de nuevas legislaciones que beneficien a esta población. 
+      Si eres paciente con Diabetes tipo 1, regístrate aquí.
+    </p>
+    <button (click)="irARegistro()" class="btn btn-primary">Regístrate aquí</button>
+  </div>
+
+  <!-- Sección de Programas y capacitaciones -->
+  <div class="training-section">
+    <h2 class="section-title">
+      <span class="title-text">
+        Programas y<br>capacitaciones
+      </span>
+    </h2>
+    <div class="training-carousel d-flex flex-wrap justify-content-center">
+      <a href="https://aulamedicavirtual.com/" class="training-item" target="_blank">
+        <img src="assets/capacitaciones/image1.png" alt="Cohorte 3" class="img-fluid">
+      </a>
+      <a href="https://aulamedicavirtual.com/" class="training-item" target="_blank">
+        <img src="assets/capacitaciones/image2.png" alt="Curso de obesidad" class="img-fluid">
+      </a>
+      <a href="https://aulamedicavirtual.com/" class="training-item" target="_blank">
+        <img src="assets/capacitaciones/image3.png" alt="Cohorte 2" class="img-fluid">
+      </a>
+    </div>
+
+    <h3>CURSO DE DIABETES</h3>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" 
+            title="Curso de Diabetes" frameborder="0" allowfullscreen></iframe>
+    <a href="https://aula-medica.com" class="visit-button btn btn-warning">Visitar Aula Médica</a>
+  </div>
+</div>
+
+<!-- Sección: Redes Sociales -->
+<div class="social-media-section">
+  <h2 class="section-title">Nuestras Redes </h2>
+
+  <div class="social-container d-flex flex-wrap justify-content-center">
+    <!-- Facebook -->
+    <div class="social-card m-2">
+      <h3>Facebook</h3>
+      <iframe 
+        src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/CasaDeDiabetes/&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" 
+        width="340" height="500" style="border:none;overflow:hidden" 
+        scrolling="no" frameborder="0" allowfullscreen="true">
+      </iframe>
+    </div>
+
+    <!-- Instagram -->
+    <div class="social-card m-2">
+      <h3>Instagram</h3>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/casadeladiabetes/?hl=es" data-instgrm-version="12">
+        <a href="https://www.instagram.com/casadeladiabetes/?hl=es" target="_blank">Ver en Instagram</a>
+      </blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </div>
+  </div>
+</div>
+
+<div class="spotify-container">
+  <iframe style="border-radius:12px" 
+      src="https://open.spotify.com/embed/episode/65p2dSYHTjd9m05kt4gFPS?utm_source=generator" 
+      width="100%" 
+      height="152" 
+      frameBorder="0" 
+      allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+  </iframe>
+</div>
+
+
+<div class="container mt-4 position-relative">
+  <button class="custom-arrow custom-prev" onclick="$('.empresas-carousel').slick('slickPrev')">&lt;</button>
+  <div class="slick-carousel empresas-carousel">
+      <div><img src="assets/empresas/club.png" class="empresas-img" alt="Imagen 1"></div>
+      <div><img src="assets/empresas/federacion.png" class="empresas-img" alt="Imagen 2"></div>
+      <div><img src="assets/empresas/insulin.png" class="empresas-img" alt="Imagen 3"></div>
+      <div><img src="assets/empresas/lapa.png" class="empresas-img" alt="Imagen 4"></div>
+      <div><img src="assets/empresas/life.png" class="empresas-img" alt="Imagen 5"></div>
+      <div><img src="assets/empresas/renarec.png" class="empresas-img" alt="Imagen 6"></div>
+      <div><img src="assets/empresas/Ucatolica.png" class="empresas-img" alt="Imagen 7"></div>
+      <div><img src="assets/empresas/UCuenca.png" class="empresas-img" alt="Imagen 8"></div>
+      <div><img src="assets/empresas/redcap.png" class="empresas-img" alt="Imagen 9"></div>
+  </div>
+  <button class="custom-arrow custom-next" onclick="$('.empresas-carousel').slick('slickNext')">&gt;</button>
+</div>
+
+<!-- Sección de iconos de redes sociales -->
+<div class="social-bar">
+  <a href="https://www.tiktok.com/@casadeladiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+  <a href="https://www.facebook.com/CasaDeDiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+  <a href="https://www.instagram.com/casadeladiabetes/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+  <a href="https://x.com/i/flow/login?redirect_after_login=%2FCasaDeDiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+  <a href="https://www.youtube.com/channel/UC1YqPCb6B9XO6dHkYYXpIrg" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+</div>

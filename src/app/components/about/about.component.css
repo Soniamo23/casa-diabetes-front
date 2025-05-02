@@ -1,0 +1,377 @@
+/* ===================== */
+/* Estilos base (pantalla grande) */
+/* ===================== */
+
+/* Contenedor general */
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Imagen de la familia */
+.enlace-imagen {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================== */
+/* Sección “Nosotros” */
+/* ===================== */
+.nosotros {
+  background-color: #2994d1;
+  padding: 20px;
+  color: white;
+}
+.nosotros .content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+.nosotros h2 {
+  font-size: 33px;
+  display: flex;
+  align-items: center;
+}
+.nosotros h2::before {
+  content: ">";
+  color: #1d428c;
+  margin-right: 10px;
+}
+.nosotros li {
+  list-style-type: none;
+  font-family: "Quicksand", Sans-serif;
+  font-weight: 600;
+  margin-top: 30px;
+  font-size: 16px; /* ajustado según pediste */
+}
+
+/* ===================== */
+/* Línea de tiempo */
+/* ===================== */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px 0;
+}
+.timeline-title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #1d428c;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 200px;
+  white-space: nowrap;
+}
+.timeline-title::before {
+  content: "> ";
+  color: #f2a53b;
+  font-size: 28px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.timeline-title-arrow {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #2994d1;
+  margin-left: 10px;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: translateX(-3px); }
+  50% { transform: translateX(0); }
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    #2994d1 0%,
+    #2994d1 var(--progress, 0%),
+    #e0e0e0 var(--progress, 0%),
+    #e0e0e0 100%
+  );
+  top: 100px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  transition: background 0.5s ease;
+}
+.event {
+  display: flex;
+  margin: 80px 0;
+  position: relative;
+  opacity: 0.5;
+  transition: opacity 0.5s ease, background-color 0.5s ease;
+}
+.event.left { flex-direction: row; }
+.event.right { flex-direction: row-reverse; }
+.event .date {
+  position: absolute;
+  top: -70px;
+  background-color: white;
+  color: #2994d1;
+  padding: 5px 10px;
+  border: 2px solid #2994d1;
+  border-radius: 5px;
+  z-index: 1;
+  transition: color 0.5s ease;
+}
+.event.left .date {
+  left: 50%;
+  transform: translateX(-150%);
+}
+.event.right .date {
+  right: 50%;
+  transform: translateX(150%);
+}
+.event .content {
+  background-color: rgb(54, 86, 203);
+  border: 2px solid #104e71;
+  border-radius: 8px;
+  padding: 15px;
+  position: relative;
+  width: 45%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-top: -40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.event.visible {
+  opacity: 1;
+  background-color: #e6f7ff;
+}
+.event.visible .date {
+  color: #1b3ab4;
+}
+.img-timeline {
+  width: 100%;
+  border-radius: 5px;
+}
+.event::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #0cdf13;
+  z-index: 2;
+  transition: background-color 0.5s ease;
+}
+.event.left::before {
+  left: calc(50% - 5px);
+}
+.event.right::before {
+  right: calc(50% - 5px);
+}
+
+/* ===================== */
+/* Secciones Misión / Visión */
+/* ===================== */
+.seccion {
+  width: 100%;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+.mision {
+  background-color: #f2a53b;
+  color: white;
+}
+.vision {
+  background-color: #1c3d88;
+  color: white;
+}
+.contenido {
+  max-width: 900px;
+  text-align: left;
+}
+.icono-centrado {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 70px;
+  height: 70px;
+}
+.titulo {
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.flecha {
+  font-size: 28px;
+  margin-right: 10px;
+}
+.flecha.azul { color: #1c3d88; }
+.flecha.naranja { color: #f2a53b; }
+.justificado {
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ===================== */
+/* Carrusel de empresas */
+/* ===================== */
+.empresas-carousel {
+  position: relative;
+  margin: 60px auto !important;
+  overflow: hidden !important;
+  width: 60%;
+}
+.empresas-img {
+  max-height: 40px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: none;
+  color: #0047AB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+.custom-arrow:hover {
+  color: #002D72;
+}
+.custom-prev { left: 180px; }
+.custom-next { right: 180px; }
+
+/* ===================== */
+/* Barra de redes sociales */
+/* ===================== */
+.social-bar {
+  background-color: #1d428c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+.social-icon {
+  color: white;
+  font-size: 24px;
+  margin: 0 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #FFD700;
+}
+
+/* ===================== */
+/* 📱 Media Queries (≤768px) */
+/* ===================== */
+@media (max-width: 768px) {
+  /* Ajustes generales */
+  .container {
+    padding: 10px;
+  }
+  .enlace-imagen {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  /* Nosotros */
+  .nosotros .content {
+    padding: 0 10px;
+  }
+  .nosotros h2 {
+    font-size: 24px;
+  }
+  .nosotros li {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  /* Línea de tiempo en columna */
+  .timeline {
+    padding: 10px 0;
+  }
+  .timeline-title {
+    padding-left: 20px;
+    font-size: 20px;
+  }
+  .timeline::after {
+    left: 10px;
+  }
+  .event {
+    flex-direction: column !important;
+    align-items: center;
+    margin: 40px 0;
+  }
+  .event .content {
+    width: 90% !important;
+    margin-top: 0;
+  }
+  .event .date {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-bottom: 10px;
+  }
+  .event.left::before,
+  .event.right::before {
+    left: 5px;
+    right: auto;
+  }
+
+  /* Misión / Visión */
+  .seccion {
+    flex-direction: column;
+    padding: 40px 10px;
+  }
+  .contenido {
+    padding: 0 10px;
+  }
+  .titulo {
+    font-size: 22px;
+  }
+  .justificado {
+    font-size: 16px;
+  }
+
+  /* 7) Carrusel full width */
+  .empresas-carousel {
+    width: 100% !important;
+  }
+  .custom-prev { left: 20px; }
+  .custom-next { right:20px; }
+
+
+  /* Redes sociales */
+  .social-icon {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+}

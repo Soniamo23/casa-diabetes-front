@@ -1,0 +1,272 @@
+/* Estilos generales del contenedor del formulario */
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  font-family: Arial, sans-serif;
+  padding: 20px; /* Agregar padding para que el contenido no esté pegado a los bordes */
+}
+
+/* Encabezado del formulario */
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0; /* Ajustar el padding */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Títulos */
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Controles de tamaño de fuente */
+.font-size-controls {
+  display: flex;
+  gap: 5px;
+}
+
+/* Botones de tamaño de fuente */
+.font-size-btn {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+/* Tamaños de fuente */
+.font-size-btn.small {
+  font-size: 12px;
+}
+
+.font-size-btn.medium {
+  font-size: 16px;
+}
+
+.font-size-btn.large {
+  font-size: 20px;
+}
+
+/* Contenedor del logo */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Botón de retroceso */
+.back-button {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background: #333;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Icono de retroceso */
+.back-icon {
+  font-size: 12px;
+}
+
+/* Logo */
+.logo {
+  max-width: 100%; /* Cambiar a 100% para que sea responsivo */
+  height: auto;
+}
+
+/* Sección del formulario */
+.form-section {
+  padding: 15px 0; /* Ajustar el padding */
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Preguntas y campos del formulario */
+.form-question, .form-field {
+  margin-bottom: 10px;
+}
+
+/* Etiquetas */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Botones de opción */
+.option-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+/* Botones de opción */
+.option-button {
+  padding: 10px 15px;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+}
+
+/* Botón de opción seleccionado */
+.option-button.selected {
+  background-color: #f0f7ff;
+  box-shadow: 0 0 0 2px #3498db;
+}
+
+/* Enlace de reinicio */
+.reset-link {
+  display: block;
+  text-align: right;
+  color: #3498db;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Campos de entrada */
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Área de texto */
+.form-textarea {
+  min-height: 100px;
+}
+
+/* Enlace de expansión */
+.expand-link {
+  text-align: right;
+  margin-top: 5px;
+}
+
+/* Enlace de expansión */
+.expand-link a {
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Acciones del formulario */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0; /* Ajustar el padding */
+}
+
+/* Botón de envío */
+.submit-button {
+  padding: 8px 30px;
+  background-color: white;
+  border: 1px solid #9c2e2e;
+  color: #9c2e2e;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Efecto hover para el botón de envío */
+.submit-button:hover {
+  background-color: #f8f8f8;
+}
+
+/* Pie de página del formulario */
+.form-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Enlaces en el pie de página */
+.form-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Para dar el estilo del fondo oscuro alrededor del formulario */
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: #333;
+  padding: 20px 0;
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  .form-container {
+      padding: 15px; /* Reducir el padding en pantallas más pequeñas */
+  }
+
+  h1 {
+      font-size: 18px; /* Ajustar el tamaño del título */
+  }
+
+  .font-size-btn {
+      font-size: 14px; /* Ajustar el tamaño de los botones de tamaño de fuente */
+  }
+
+  .form-input, .form-textarea {
+      font-size: 14px; /* Ajustar el tamaño de la fuente en los campos */
+  }
+
+  .submit-button {
+      padding: 8px 20px; /* Ajustar el padding del botón de envío */
+  }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+  .form-container {
+      padding: 10px; /* Reducir aún más el padding */
+  }
+
+  h1 {
+      font-size: 16px; /* Ajustar el tamaño del título */
+  }
+
+  .font-size-btn {
+      font-size: 12px; /* Ajustar el tamaño de los botones de tamaño de fuente */
+  }
+
+  .form-input, .form-textarea {
+      font-size: 12px; /* Ajustar el tamaño de la fuente en los campos */
+  }
+
+  .submit-button {
+      padding: 8px 15px; /* Ajustar el padding del botón de envío */
+  }
+
+  .back-button {
+      width: 25px; /* Ajustar el tamaño del botón de retroceso */
+      height: 25px;
+  }
+
+  .back-icon {
+      font-size: 10px; /* Ajustar el tamaño del icono de retroceso */
+  }
+}

@@ -1,0 +1,196 @@
+/* ===================== */
+/* Estilos generales */
+/* ===================== */
+.contact-container {
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Título */
+h2 {
+  color: #29539b;
+  text-align: center;
+  font-size: 2rem;
+  margin: 30px 0;
+  font-weight: bold;
+}
+
+/* Estilos del formulario */
+form {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  width: 48%;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  color: #29539b;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+/* Botón de envío */
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #f9a83f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 20px 0;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #e8971a;
+}
+
+/* ===================== */
+/* Carrusel de empresas */
+/* ===================== */
+.empresas-carousel {
+  position: relative;
+  margin: 60px auto !important;
+  overflow: hidden !important;
+  width: 60%;
+}
+.empresas-img {
+  max-height: 40px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: none;
+  color: #0047AB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+.custom-arrow:hover {
+  color: #002D72;
+}
+.custom-prev { left: 180px; }
+.custom-next { right: 180px; }
+
+/* ===================== */
+/* Barra azul de redes sociales */
+/* ===================== */
+.social-bar {
+  background-color: #1d428c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 24px;
+  margin: 0 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #FFD700;
+}
+
+/* ===================== */
+/* 📱 Media Queries (≤768px) */
+/* ===================== */
+@media (max-width: 768px) {
+  /* Contenedor y formulario apilados */
+  .contact-container {
+    padding: 10px;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  input,
+  textarea {
+    padding: 8px;
+  }
+
+  textarea {
+    height: 120px;
+  }
+
+  .submit-button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  /* Carrusel ocupa más ancho y flechas más pequeñas */
+  .empresas-carousel {
+    width: 100% !important;
+  }
+  .custom-prev { left: 20px; }
+  .custom-next { right:20px; }
+
+  /* Redes sociales más compactas */
+  .social-icon {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+}

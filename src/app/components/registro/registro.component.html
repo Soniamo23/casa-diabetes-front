@@ -1,0 +1,56 @@
+<div class="container">
+    <h1>REGISTRO NACIONAL PERSONAS CON DIABETES TIPO 1</h1>
+    <p><strong>Por favor completar la encuesta de abajo.</strong></p>
+    <p>¡Gracias!</p>
+
+    <!-- Mensaje de error si los campos están vacíos -->
+    <p *ngIf="mensajeError" class="error-msg">{{ mensajeError }}</p>
+
+    <form (submit)="enviarFormulario()">
+        <div class="form-group">
+            <label for="nombre">Nombres:</label>
+            <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" required>
+            <span class="error" *ngIf="mostrarError && !nombre">* Campo requerido</span>
+        </div>
+
+        <div class="form-group">
+            <label for="apellido">Apellidos:</label>
+            <input type="text" id="apellido" [(ngModel)]="apellido" name="apellido" required>
+            <span class="error" *ngIf="mostrarError && !apellido">* Campo requerido</span>
+        </div>
+
+        <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" [(ngModel)]="telefono" name="telefono" required>
+            <span class="error" *ngIf="mostrarError && !telefono">* Campo requerido</span>
+        </div>
+
+        <div class="form-group">
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" id="fecha" [(ngModel)]="fechaNacimiento" name="fechaNacimiento" required>
+            <span class="error" *ngIf="mostrarError && !fechaNacimiento">* Campo requerido</span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" [(ngModel)]="email" name="email" required>
+            <span class="error" *ngIf="mostrarError && !email">* Campo requerido</span>
+        </div>
+
+        <div class="form-group">
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" [(ngModel)]="ciudad" name="ciudad" required>
+            <span class="error" *ngIf="mostrarError && !ciudad">* Campo requerido</span>
+        </div>
+
+        <div class="form-group">
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" [(ngModel)]="direccion" name="direccion" required>
+            <span class="error" *ngIf="mostrarError && !direccion">* Campo requerido</span>
+        </div>
+
+        <div class="button-container">
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</div>

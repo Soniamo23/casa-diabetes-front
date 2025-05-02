@@ -1,0 +1,309 @@
+<div class="actividades-container">
+    <h2 class="titulo-seccion">Actividades</h2>
+    
+    <div class="menu">
+      <div class="menu-background"></div>
+      <button (click)="seleccionarActividad('Educativas')" [class.activo]="actividadSeleccionada === 'Educativas'">
+        <div class="icono">
+          <img src="assets/iconosactividades/educativas.png" alt="Educativas" />
+        </div>
+        <div class="titulo">
+          Educativas
+        </div>
+      </button>
+  
+      <button (click)="seleccionarActividad('Capacitaciones')" [class.activo]="actividadSeleccionada === 'Capacitaciones'">
+        <div class="icono">
+          <img src="assets/iconosactividades/capacitaciones.png" alt="Capacitaciones" />
+        </div>
+        <div class="titulo">
+          Capacitaciones
+        </div>
+      </button>
+  
+      <button (click)="seleccionarActividad('Encuestas')" [class.activo]="actividadSeleccionada === 'Encuestas'">
+        <div class="icono">
+          <img src="assets/iconosactividades/encuestas.png" alt="Encuestas" />
+        </div>
+        <div class="titulo">
+          Encuestas
+        </div>
+      </button>
+  
+      <button (click)="seleccionarActividad('Rendición de cuentas')" [class.activo]="actividadSeleccionada === 'Rendición de cuentas'">
+        <div class="icono">
+          <img src="assets/iconosactividades/rendincioncuentas.png" alt="Rendición de cuentas" />
+        </div>
+        <div class="titulo">
+          Rendición de cuentas
+        </div>
+      </button>
+  
+      <button (click)="seleccionarActividad('Proyectos')" [class.activo]="actividadSeleccionada === 'Proyectos'">
+        <div class="icono">
+          <img src="assets/iconosactividades/proyectos.png" alt="Proyectos" />
+        </div>
+        <div class="titulo">
+          Proyectos
+        </div>
+      </button>
+    </div>
+  </div>
+  
+
+
+
+  <!--EDUCATIVAS  1-10-->
+    <div *ngIf="actividadSeleccionada === 'Educativas'" class="actividades-grid">
+        <div class="actividad-detail">
+            <div class="actividad-card">
+                <img src="assets/detalle-activ/actividad1/manuelac.png" alt="Manuela Cañizares" class="actividad-image">
+                <div class="actividad-content">
+                    <h3>Unidad Educativa Manuela Cañizares</h3>
+                    <p>Aquí va una breve descripción de los servicios ofrecidos.</p>
+                    <button (click)="verMas(1)" class="ver-mas-btn">Ver más</button> <!-- ID 1 -->
+                </div>
+            </div>
+            <!-- Puedes agregar más tarjetas de actividades educativas aquí si es necesario -->
+        </div>
+    </div>
+
+
+    <div *ngIf="actividadSeleccionada === 'Educativas'" class="actividades-grid">
+        <div class="actividad-detail">
+            <div class="actividad-card">
+                <img src="assets/detalle-activ/actividad1/manuelac.png" alt="Manuela Cañizares" class="actividad-image">
+                <div class="actividad-content">
+                    <h3>Unidad Educativa Manuela Cañizares</h3>
+                    <p>Aquí va una breve descripción de los servicios ofrecidos.</p>
+                    <button (click)="verMas(2)" class="ver-mas-btn">Ver más</button> <!-- ID 2 -->
+                </div>
+            </div>
+            <!-- Puedes agregar más tarjetas de actividades educativas aquí si es necesario -->
+        </div>
+    </div>
+
+
+    <div *ngIf="actividadSeleccionada === 'Educativas'" class="actividades-grid">
+        <div class="actividad-detail">
+            <div class="actividad-card">
+                <img src="assets/detalle-activ/actividad1/manuelac.png" alt="Manuela Cañizares" class="actividad-image">
+                <div class="actividad-content">
+                    <h3>Unidad Educativa Manuela Cañizares</h3>
+                    <p>Aquí va una breve descripción de los servicios ofrecidos.</p>
+                    <button (click)="verMas(3)" class="ver-mas-btn">Ver más</button> <!-- ID 3 -->
+                </div>
+            </div>
+            <!-- Puedes agregar más tarjetas de actividades educativas aquí si es necesario -->
+        </div>
+    </div>
+  
+    <div *ngIf="actividadSeleccionada === 'Educativas'" class="actividades-grid">
+        <div class="actividad-detail">
+            <div class="actividad-card">
+                <img src="assets/detalle-activ/actividad1/manuelac.png" alt="Manuela Cañizares" class="actividad-image">
+                <div class="actividad-content">
+                    <h3>Unidad Educativa Manuela Cañizares</h3>
+                    <p>Aquí va una breve descripción de los servicios ofrecidos.</p>
+                    <button (click)="verMas(4)" class="ver-mas-btn">Ver más</button> <!-- ID 4 -->
+                </div>
+            </div>
+            <!-- Puedes agregar más tarjetas de actividades educativas aquí si es necesario -->
+        </div>
+    </div>
+
+<!-- CAPACITACIONES 11-21 -->
+
+    <div *ngIf="actividadSeleccionada === 'Capacitaciones'" class="actividades-grid">
+        <div class="actividad-detail">
+            <div class="actividad-card">
+                <img src="assets/detalle-activ/actividad1/manuelac.png" alt="Manuela Cañizares" class="actividad-image">
+                <div class="actividad-content">
+                    <h3>Taller de Educación en Diabetes</h3>
+                    <p>Hoy se realizó el taller de Educación en Diabetes, a la cohorte 8, zona 9 del Ministerio de salud pública, gracias a todo por su asistencia.</p>
+                    <button (click)="verMas(11)" class="ver-mas-btn">Ver más</button> <!-- ID 11 -->
+                </div>
+            </div>
+            <!-- Puedes agregar más tarjetas de actividades de capacitación aquí si es necesario -->
+        </div>
+    </div>
+  
+
+  <div *ngIf="actividadSeleccionada === 'Capacitaciones'" class="actividades-grid">
+    <div class="actividad-detail">
+        <div class="actividad-card">
+            <img src="assets/detalle-activ/actividad1/manuelac.png" alt="Manuela Cañizares" class="actividad-image">
+            <div class="actividad-content">
+                <h3>Taller de Educación en Diabetes</h3>
+                <p>Hoy se realizó el taller de Educación en Diabetes, a la cohorte 8, zona 9 del Ministerio de salud pública, gracias a todo por su asistencia.</p>
+                <button (click)="verMas(12)" class="ver-mas-btn">Ver más</button> <!-- ID 12 -->
+            </div>
+        </div>
+        <!-- Puedes agregar más tarjetas de actividades de capacitación aquí si es necesario -->
+    </div>
+</div>
+
+<div *ngIf="actividadSeleccionada === 'Capacitaciones'" class="actividades-grid">
+    <div class="actividad-detail">
+        <div class="actividad-card">
+            <img src="assets/detalle-activ/actividad1/manuelac.png" alt="Manuela Cañizares" class="actividad-image">
+            <div class="actividad-content">
+                <h3>Taller de Educación en Diabetes</h3>
+                <p>Hoy se realizó el taller de Educación en Diabetes, a la cohorte 8, zona 9 del Ministerio de salud pública, gracias a todo por su asistencia.</p>
+                <button (click)="verMas(13)" class="ver-mas-btn">Ver más</button> <!-- ID 13 -->
+            </div>
+        </div>
+        <!-- Puedes agregar más tarjetas de actividades de capacitación aquí si es necesario -->
+    </div>
+</div>
+
+
+<div *ngIf="actividadSeleccionada === 'Capacitaciones'" class="actividades-grid">
+    <div class="actividad-detail">
+        <div class="actividad-card">
+            <img src="assets/detalle-activ/actividad1/manuelac.png" alt="Manuela Cañizares" class="actividad-image">
+            <div class="actividad-content">
+                <h3>Taller de Educación en Diabetes</h3>
+                <p>Hoy se realizó el taller de Educación en Diabetes, a la cohorte 8, zona 9 del Ministerio de salud pública, gracias a todo por su asistencia.</p>
+                <button (click)="verMas(14)" class="ver-mas-btn">Ver más</button> <!-- ID 14 -->
+            </div>
+        </div>
+        <!-- Puedes agregar más tarjetas de actividades de capacitación aquí si es necesario -->
+    </div>
+</div>
+
+<div *ngIf="actividadSeleccionada === 'Capacitaciones'" class="actividades-grid">
+    <div class="actividad-detail">
+        <div class="actividad-card">
+            <img src="assets/detalle-activ/actividad1/manuelac.png" alt="Manuela Cañizares" class="actividad-image">
+            <div class="actividad-content">
+                <h3>Taller de Educación en Diabetes</h3>
+                <p>Hoy se realizó el taller de Educación en Diabetes, a la cohorte 8, zona 9 del Ministerio de salud pública, gracias a todo por su asistencia.</p>
+                <button (click)="verMas(15)" class="ver-mas-btn">Ver más</button> <!-- ID 15 -->
+            </div>
+        </div>
+        <!-- Puedes agregar más tarjetas de actividades de capacitación aquí si es necesario -->
+    </div>
+</div>
+
+
+
+
+<!-- ENCUESTA -->
+ 
+
+   <!-- Contenido específico según la actividad seleccionada -->
+   <div *ngIf="actividadSeleccionada === 'Encuestas'" class="contenido-actividad">
+    <button class="boton-secundario" (click)="navegarA('/test-findrisk')">
+        Test de Findrisk
+    </button>
+</div>
+
+<div *ngIf="actividadSeleccionada === 'Rendición de cuentas'" class="contenido-actividad">
+    <button class="boton-secundario" (click)="navegarA('/informe-2024')">
+        Informe 2024
+    </button>
+</div>
+
+  
+
+
+
+
+<!--PROYECTOS 22 - 31-->
+
+
+
+
+<div *ngIf="actividadSeleccionada === 'Proyectos'" class="actividades-grid">
+    <div class="actividad-detail">
+        <div class="actividad-card">
+            <img src="assets/detalle-activ/actividad1/manuelac.png" alt="Manuela Cañizares" class="actividad-image">
+            <div class="actividad-content">
+                <h3>Representación internacional de la Casa de la Diabetes en el Congreso Mundial de la IDF</h3>
+                <p>Pablo Zúñiga Arteaga, joven líder de la Casa de la Diabetes, participa en la Jornada de Formación y en el Congreso Mundial de la Federación Internacional de Diabetes (IDF) que  </p>
+                <button (click)="verMas(22)" class="ver-mas-btn">Ver más</button> <!-- ID 3 -->
+            </div>
+        </div>
+        <!-- Puedes agregar más tarjetas de actividades educativas aquí si es necesario -->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!--NUESTRAS REDES-->
+<div class="social-media-section">
+    <h2 class="section-title">Redes Sociales</h2>
+
+    <div class="social-container">
+      <!-- Facebook -->
+      <div class="social-card">
+        <h3>Facebook</h3>
+        <iframe 
+          src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/CasaDeDiabetes/&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" 
+          width="340" height="500" style="border:none;overflow:hidden" 
+          scrolling="no" frameborder="0" allowfullscreen="true">
+        </iframe>
+      </div>
+
+      <!-- Instagram -->
+      <div class="social-card">
+        <h3>Instagram</h3>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CODE_DE_TU_PUBLICACION/" data-instgrm-version="12">
+          <a href="https://www.instagram.com/casadeladiabetes/?hl=es" target="_blank">Ver en Instagram</a>
+        </blockquote>
+        <script async src="//www.instagram.com/embed.js"></script>
+      </div>
+    </div>
+</div>
+  
+  
+  <!--SPOTIFY-->
+  <div class="spotify-container">
+    <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/episode/65p2dSYHTjd9m05kt4gFPS?utm_source=generator" 
+        width="50%" 
+        height="152" 
+        frameBorder="0" 
+        allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+  </div>
+
+
+
+  <!--CARRUSEL DE IMAGENES -->
+  <div class="container mt-4 position-relative">
+    <button class="custom-arrow custom-prev" onclick="$('.empresas-carousel').slick('slickPrev')">&lt;</button>
+    <div class="slick-carousel empresas-carousel">
+        <div><img src="assets/empresas/club.png" class="empresas-img" alt="Imagen 1"></div>
+        <div><img src="assets/empresas/federacion.png" class="empresas-img" alt="Imagen 2"></div>
+        <div><img src="assets/empresas/insulin.png" class="empresas-img" alt="Imagen 3"></div>
+        <div><img src="assets/empresas/lapa.png" class="empresas-img" alt="Imagen 4"></div>
+        <div><img src="assets/empresas/life.png" class="empresas-img" alt="Imagen 5"></div>
+        <div><img src="assets/empresas/renarec.png" class="empresas-img" alt="Imagen 6"></div>
+        <div><img src="assets/empresas/Ucatolica.png" class="empresas-img" alt="Imagen 7"></div>
+        <div><img src="assets/empresas/UCuenca.png" class="empresas-img" alt="Imagen 8"></div>
+        <div><img src="assets/empresas/redcap.png" class="empresas-img" alt="Imagen 9"></div>
+    </div>
+    <button class="custom-arrow custom-next" onclick="$('.empresas-carousel').slick('slickNext')">&gt;</button>
+</div>
+
+
+
+<!--ICONOS DE REDES SOCIALES-->
+
+<!-- Sección de iconos de redes sociales -->
+<div class="social-bar">
+    <a href="https://www.tiktok.com/@casadeladiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="https://www.facebook.com/CasaDeDiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com/casadeladiabetes/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://x.com/i/flow/login?redirect_after_login=%2FCasaDeDiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://www.youtube.com/channel/UC1YqPCb6B9XO6dHkYYXpIrg" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+  </div>

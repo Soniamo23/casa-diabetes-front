@@ -1,0 +1,338 @@
+.titulo-carrito {
+    text-align: center;
+    color: #104984;
+    margin: 30px 0;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .carrito-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .carrito-container {
+      flex-direction: column;
+    }
+  }
+  
+  .tabla-carrito {
+    flex: 3;
+  }
+  
+  .resumen-carrito {
+    flex: 1;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    color: #104984;
+  }
+  
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+  }
+  
+  .producto-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .imagen-producto {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  .eliminar-item {
+    background: none;
+    border: none;
+    color: #ff5500;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 10px;
+  }
+  
+  input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .total-carrito {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .total-carrito h3 {
+    color: #104984;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .subtotal, .total {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .total {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 10px;
+    border-bottom: none;
+  }
+  
+  .envio {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .envio > span {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .opciones-envio {
+    margin-left: 10px;
+  }
+  
+  .opcion-envio {
+    margin-bottom: 5px;
+  }
+  
+  .direccion-envio {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .direccion-envio a {
+    color: #104984;
+    text-decoration: none;
+  }
+  
+  .direccion-envio a:hover {
+    text-decoration: underline;
+  }
+  
+  .btn-proceder {
+    background-color: #ff9d46;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-proceder:hover {
+    background-color: #ff8c2c;
+  }
+  
+  .carrito-vacio {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 500px;
+  }
+  
+  .carrito-vacio p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .btn-naranja {
+    background-color: #ff9d46;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-naranja:hover {
+    background-color: #ff8c2c;
+  }
+
+
+
+
+
+
+
+  /* ====== CARRUSEL DE EMPRESAS ====== */
+.empresas-carousel {
+  position: relative;
+  margin: 60px auto !important;
+  overflow: hidden !important;
+  width: 60%;
+}
+
+.empresas-img {
+  max-height: 40px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Flechas personalizadas */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+  color: #0047AB; /* Color azul para las flechas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 40px; /* Tamaño grande para las flechas */
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 0;
+  border-radius: 50%; /* Hacer las flechas redondas */
+}
+
+.custom-arrow:hover {
+  color: #002D72; /* Azul más oscuro al pasar el cursor */
+}
+
+.custom-prev {
+  left: 10px; /* Ajusta la posición de la flecha izquierda */
+}
+
+.custom-next {
+  right: 10px; /* Ajusta la posición de la flecha derecha */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .empresas-carousel {
+    width: 100% !important; /* Hacer que el carrusel ocupe el 100% en pantallas pequeñas */
+  }
+
+  .custom-arrow {
+    font-size: 30px; /* Reducir el tamaño de las flechas en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-arrow {
+    font-size: 24px; /* Ajustar aún más el tamaño de las flechas en móviles */
+  }
+}
+  
+  
+  /* 🔹 Barra azul para las redes sociales */
+  .social-bar {
+    background-color: #1d428c; /* Azul */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  /* 🔹 Estilos para los iconos */
+  .social-icon {
+    color: white;
+    font-size: 24px;
+    margin: 0 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+    color: #FFD700; /* Amarillo dorado al pasar el mouse */
+  }
+  
+  
+
+  @media (max-width: 576px) {
+    .titulo-carrito {
+      font-size: 24px;
+      margin: 20px 10px;
+    }
+  
+    .carrito-container {
+      padding: 0 10px;
+      gap: 10px;
+    }
+  
+    .producto-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .imagen-producto {
+      width: 60px;
+      height: 60px;
+    }
+  
+    input[type="number"] {
+      width: 40px;
+      font-size: 14px;
+    }
+  
+    .btn-proceder {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    th, td {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .total-carrito {
+      padding: 15px;
+    }
+  
+    .total-carrito h3 {
+      font-size: 18px;
+    }
+  
+    .subtotal, .total, .envio {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .btn-naranja {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  

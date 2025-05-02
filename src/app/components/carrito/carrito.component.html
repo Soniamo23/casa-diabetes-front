@@ -1,0 +1,116 @@
+<h1 class="titulo-carrito">Carrito</h1>
+
+<div class="carrito-container" *ngIf="carrito.length > 0">
+  <div class="tabla-carrito">
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of carrito">
+          <td class="producto-info">
+            <button class="eliminar-item" (click)="eliminarProducto(item.id)">×</button>
+            <img [src]="obtenerImagenProducto(item.id)" alt="Imagen del producto" class="imagen-producto">
+            <span>{{ obtenerNombreProducto(item.id) }}</span>
+          </td>
+          <td>${{ obtenerPrecioProducto(item.id).toFixed(2) }}</td>
+          <td>
+            <input type="number" min="1" [(ngModel)]="item.qty" (change)="actualizarCarrito()">
+          </td>
+          <td>${{ (obtenerPrecioProducto(item.id) * item.qty).toFixed(2) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="resumen-carrito">
+    <div class="total-carrito">
+      <h3>Total del carrito</h3>
+      
+      <div class="subtotal">
+        <span>Subtotal</span>
+        <span>${{ calcularSubtotal().toFixed(2) }}</span>
+      </div>
+      
+      <div class="envio">
+        <span>Envío</span>
+        <div class="opciones-envio">
+          <div class="opcion-envio">
+            <input type="radio" id="envio-azuay" name="envio" [(ngModel)]="metodoEnvio" value="azuay" checked>
+            <label for="envio-azuay">Azuay: $3.00</label>
+          </div>
+          <div class="opcion-envio">
+            <input type="radio" id="recogida-local" name="envio" [(ngModel)]="metodoEnvio" value="local">
+            <label for="recogida-local">Recogida local</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="direccion-envio" *ngIf="metodoEnvio === 'azuay'">
+        <a href="#" (click)="cambiarDireccion($event)">Enviar a Azuay</a>
+        <a href="#" (click)="cambiarDireccion($event)">Cambiar dirección</a>
+      </div>
+      
+      <div class="total">
+        <span>Total</span>
+        <span>${{ calcularTotal().toFixed(2) }}</span>
+      </div>
+      
+      <button class="btn-proceder" (click)="procederAlPago()">Proceder al pago</button>
+    </div>
+  </div>
+</div>
+
+<div class="carrito-vacio" *ngIf="carrito.length === 0">
+  <p>Tu carrito está vacío.</p>
+  <button class="btn-naranja" [routerLink]="['/tienda']">Ir a la tienda</button>
+</div>
+
+
+
+
+
+
+
+
+<!-- CARRUSEL DE IMÁGENES -->
+<div class="container mt-4 position-relative">
+    <button class="custom-arrow custom-prev" onclick="$('.empresas-carousel').slick('slickPrev')">&lt;</button>
+    <div class="slick-carousel empresas-carousel">
+      <div><img src="assets/empresas/club.png" class="empresas-img" alt="Imagen 1"></div>
+      <div><img src="assets/empresas/federacion.png" class="empresas-img" alt="Imagen 2"></div>
+      <div><img src="assets/empresas/insulin.png" class="empresas-img" alt="Imagen 3"></div>
+      <div><img src="assets/empresas/lapa.png" class="empresas-img" alt="Imagen 4"></div>
+      <div><img src="assets/empresas/life.png" class="empresas-img" alt="Imagen 5"></div>
+      <div><img src="assets/empresas/renarec.png" class="empresas-img" alt="Imagen 6"></div>
+      <div><img src="assets/empresas/Ucatolica.png" class="empresas-img" alt="Imagen 7"></div>
+      <div><img src="assets/empresas/UCuenca.png" class="empresas-img" alt="Imagen 8"></div>
+      <div><img src="assets/empresas/redcap.png" class="empresas-img" alt="Imagen 9"></div>
+    </div>
+    <button class="custom-arrow custom-next" onclick="$('.empresas-carousel').slick('slickNext')">&gt;</button>
+  </div>
+  
+  <!-- ICONOS DE REDES SOCIALES -->
+  <div class="social-bar">
+    <a href="https://www.tiktok.com/@casadeladiabetes" target="_blank" class="social-icon">
+      <i class="fa-brands fa-tiktok"></i>
+    </a>
+    <a href="https://www.facebook.com/CasaDeDiabetes" target="_blank" class="social-icon">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/casadeladiabetes/" target="_blank" class="social-icon">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://x.com/CasaDeDiabetes" target="_blank" class="social-icon">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+    <a href="https://www.youtube.com/channel/UC1YqPCb6B9XO6dHkYYXpIrg" target="_blank" class="social-icon">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+  </div>
+  

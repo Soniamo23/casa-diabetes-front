@@ -1,0 +1,155 @@
+/* actividad-info.component.css */
+
+/* Contenedor principal */
+.actividad-contenido {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  padding: 20px; /* Espaciado interno */
+  font-family: "Quicksand", Sans-serif;
+}
+
+/* Estilo para el título */
+h1 {
+  font-size: 1em; /* Tamaño del título */
+  margin-bottom: 10px; /* Espacio debajo del título */
+  text-align: left; /* Alinea el título a la izquierda */
+  color: rgb(2, 13, 58); /* Color del texto */
+}
+
+/* Contenedor para el título e imagen */
+.titulo-imagen {
+  display: flex; /* Usa flexbox para alinear el título y la imagen */
+  width: 100%; /* Asegúrate de que ocupe todo el ancho */
+  max-width: 600px; /* Limita el ancho máximo */
+}
+
+/* Estilo para el título */
+.titulo-imagen h1 {
+  margin-right: 20px; /* Espacio entre el título y la imagen */
+  margin-top: 40px; /* Ajusta este valor para bajar el título más */
+  color: rgb(3, 3, 173); /* Color del texto */
+}
+
+/* Estilo para la imagen */
+.img-actividad {
+  width: 45%; /* Ajusta el tamaño de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo para el párrafo */
+p {
+  margin: 20px 0; /* Espaciado arriba y abajo del párrafo */
+  text-align: justify; /* Justifica el texto */
+  max-width: 600px; /* Limita el ancho máximo del párrafo */
+  color: rgb(7, 7, 122); /* Color del texto */
+}
+
+/* Estilo para la galería de imágenes */
+.galeria {
+  display: grid; /* Usa grid para la galería */
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 5px; /* Espacio entre las imágenes, ajustado para que estén más juntas */
+  margin-top: 20px; /* Espacio arriba de la galería */
+  max-width: 600px; /* Limita el ancho máximo */
+}
+
+/* Estilo para las imágenes de la galería */
+.galeria img {
+  width: 100%; /* Asegúrate de que las imágenes ocupen todo el ancho de la celda */
+  height: auto; /* Mantiene la proporción de las imágenes */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+
+
+/* ====== CARRUSEL DE EMPRESAS ====== */
+.empresas-carousel {
+  position: relative;
+  margin: 60px auto !important;
+  overflow: hidden !important;
+  width: 60%;
+}
+
+.empresas-img {
+  max-height: 40px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Flechas personalizadas */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+  color: #0047AB; /* Color azul para las flechas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 40px; /* Tamaño grande para las flechas */
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 0;
+  border-radius: 50%; /* Hacer las flechas redondas */
+}
+
+.custom-arrow:hover {
+  color: #002D72; /* Azul más oscuro al pasar el cursor */
+}
+
+.custom-prev {
+  left: 10px; /* Ajusta la posición de la flecha izquierda */
+}
+
+.custom-next {
+  right: 10px; /* Ajusta la posición de la flecha derecha */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .empresas-carousel {
+    width: 100% !important; /* Hacer que el carrusel ocupe el 100% en pantallas pequeñas */
+  }
+
+  .custom-arrow {
+    font-size: 30px; /* Reducir el tamaño de las flechas en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-arrow {
+    font-size: 24px; /* Ajustar aún más el tamaño de las flechas en móviles */
+  }
+}
+
+
+
+/* 🔹 Barra azul para las redes sociales */
+.social-bar {
+  background-color: #1d428c; /* Azul */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* 🔹 Estilos para los iconos */
+.social-icon {
+  color: white;
+  font-size: 24px;
+  margin: 0 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #FFD700; /* Amarillo dorado al pasar el mouse */
+}

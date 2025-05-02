@@ -1,0 +1,74 @@
+
+
+
+
+.empresas-carousel {
+    position: relative;
+    margin: 60px auto !important;
+    overflow: hidden !important;
+    width: 60%;
+  }
+  
+  .empresas-img {
+    max-height: 40px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    background: none;
+    color: #0047AB; /* Color azul para las flechas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 40px; /* Tamaño grande para las flechas */
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+  
+  .custom-arrow:hover {
+    color: #002D72; /* Azul más oscuro al pasar el cursor */
+  }
+  
+  .custom-prev {
+    left: 180px; /* Ajusta la posición de la flecha izquierda */
+  }
+  
+  .custom-next {
+    right: 180px; /* Ajusta la posición de la flecha derecha */
+  }
+  
+  
+  
+  /* 🔹 Barra azul para las redes sociales */
+  .social-bar {
+    background-color: #1d428c; /* Azul */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  /* 🔹 Estilos para los iconos */
+  .social-icon {
+    color: white;
+    font-size: 24px;
+    margin: 0 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+    color: #FFD700; /* Amarillo dorado al pasar el mouse */
+  }
+  

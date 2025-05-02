@@ -1,0 +1,265 @@
+<div class="educational-material-container">
+  <h1>Material Educativo</h1>
+
+  <!-- Navegación de categorías -->
+  <div class="navigation-icons">
+    <div 
+      *ngFor="let type of contentTypes"
+      class="nav-icon"
+      [class.active]="isActiveCategory(type.type)"
+      (click)="filterContent(type.type)"
+    >
+      <div class="nav-icon-circle">
+        <i class="fas {{ type.icon }}"></i>
+      </div>
+      <span>{{ type.label }}</span>
+    </div>  
+  </div>
+
+  <!-- Sección de Juegos -->
+  <div *ngIf="activeCategory === 'game'" class="content-section game-section">
+    
+    <div class="content-grid">
+      <div class="content-card-game">
+        <img src="assets/images/memorama.jpg" alt="Memorama Cuidado de los Pies">
+        <h3>Memorama Cuidado de los Pies</h3>
+        <a href="/juego/memorama" target="_blank">Jugar</a>
+      </div>
+      <div class="content-card-game">
+        <img src="assets/images/azucar.jpg" alt="Juego de Azúcar">
+        <h3>Juego de Azúcar</h3>
+        <a href="/juego/azucar" target="_blank">Jugar</a>
+      </div>
+      <div class="content-card-game">
+        <img src="assets/images/bingo.jpg" alt="Bingo">
+        <h3>Bingo</h3>
+        <a href="/juego/bingo" target="_blank">Jugar</a>
+      </div>
+      <div class="content-card-game">
+        <img src="assets/images/bingo.jpg" alt="Bingo">
+        <h3>Bingo</h3>
+        <a href="/juego/bingo" target="_blank">Jugar</a>
+      </div>
+      <div class="content-card-game">
+        <img src="assets/images/bingo.jpg" alt="Bingo">
+        <h3>Bingo</h3>
+        <a href="/juego/bingo" target="_blank">Jugar</a>
+      </div>
+      <div class="content-card-game">
+        <img src="assets/images/bingo.jpg" alt="Bingo">
+        <h3>Bingo</h3>
+        <a href="/juego/bingo" target="_blank">Jugar</a>
+      </div>
+    </div>
+    
+  </div>
+  
+  
+<!-- Sección de Videos -->
+
+<div *ngIf="activeCategory === 'video'" class="content-section">
+  <div class="content-container">
+    <div class="content-grid-videos">
+      <!-- Tarjeta de video 1 -->
+      <div class="content-card">
+        <iframe src="https://www.youtube.com/embed/M04YhXIAvis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <!-- Tarjeta de video 2 -->
+      <div class="content-card">
+        <iframe src="https://www.youtube.com/embed/WG1uxI6M-ZU" title="La Catedral de Cuenca Ilumina sus Cúpulas de azul por el Día Mundial de la Diabetes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <!-- Tarjeta de video 3 -->
+      <div class="content-card">
+        <iframe src="https://www.youtube.com/embed/I354VdUz0Lk" title="María Gracia en Diabetes Experience Day Latinoamérica 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <!-- Tarjeta de video 4 -->
+      <div class="content-card">
+        <iframe src="https://www.youtube.com/embed/KzttX5JQ_8Q" title="Mitos y Verdades Sobre la Diabetes Mito 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Sección de Flipbooks -->
+  <div *ngIf="activeCategory === 'flipbook'"class="content-section">
+    <div class="content-grid-flipbooks">
+      <!-- Row 1 -->
+      <div class="content-card-flipbook" [routerLink]="['/tarjetas-flipbooks', '1']">
+        <img src="assets/images/flipbooks/juegos-diabetes.jpg" alt="Juegos y diabetes">
+        <div class="card-title">Juegos y diabetes</div>
+      </div>
+      
+      <div class="content-card-flipbook" [routerLink]="['/tarjetas-flipbooks', '2']">
+        <img src="assets/images/flipbooks/tipos-diabetes.jpg" alt="Tipos de diabetes">
+        <div class="card-title">Tipos de diabetes</div>
+      </div>
+      
+      <div class="content-card-flipbook" [routerLink]="['/tarjetas-flipbooks', '3']">
+        <img src="assets/images/flipbooks/educacion-terapeutica.jpg" alt="Educación terapéutica">
+        <div class="card-title">Educación terapéutica</div>
+      </div>
+      
+      <div class="content-card-flipbook" [routerLink]="['/tarjetas-flipbooks', '4']">
+        <img src="assets/images/flipbooks/tengo-diabetes.jpg" alt="Tengo diabetes">
+        <div class="card-title">Tengo diabetes</div>
+      </div>
+      
+      <!-- Row 2 -->
+      <div class="content-card-flipbook" [routerLink]="['/tarjetas-flipbooks', '5']">
+        <img src="assets/images/flipbooks/nutricion-diabetes.jpg" alt="Nutrición y diabetes">
+        <div class="card-title">Nutrición y diabetes</div>
+      </div>
+      
+      <div class="content-card-flipbook" [routerLink]="['/tarjetas-flipbooks', '6']">
+        <img src="assets/images/flipbooks/ejercicio-fisico.jpg" alt="Ejercicio físico y diabetes">
+        <div class="card-title">Ejercicio físico y diabetes</div>
+      </div>
+      
+      <div class="content-card-flipbook" [routerLink]="['/tarjetas-flipbooks', '7']">
+        <img src="assets/images/flipbooks/recordar-diabetes.jpg" alt="Recordar diabetes">
+        <div class="card-title">Recordar diabetes</div>
+      </div>
+      
+      <div class="content-card-flipbook" [routerLink]="['/tarjetas-flipbooks', '8']">
+        <img src="assets/images/flipbooks/cuidados-diabetes.jpg" alt="Cuidados diabetes">
+        <div class="card-title">Cuidados diabetes y diabetes</div>
+      </div>
+      
+      <!-- Row 3 -->
+      <div class="content-card-flipbook" [routerLink]="['/tarjetas-flipbooks', '9']">
+        <img src="assets/images/flipbooks/situaciones-especiales.jpg" alt="Situaciones especiales">
+        <div class="card-title">Situaciones especiales y diabetes</div>
+      </div>
+      
+      <div class="content-card-flipbook" [routerLink]="['/tarjetas-flipbooks', '10']">
+        <img src="assets/images/flipbooks/insulina-diabetes.jpg" alt="Insulina y diabetes">
+        <div class="card-title">Insulina y diabetes</div>
+      </div>
+      
+      <div class="content-card-flipbook" [routerLink]="['/tarjetas-flipbooks', '11']">
+        <img src="assets/images/flipbooks/bomba-insulina.jpg" alt="Bomba de insulina">
+        <div class="card-title">Bomba de insulina y diabetes</div>
+      </div>
+      
+      <div class="content-card-flipbook" [routerLink]="['/tarjetas-flipbooks', '12']">
+        <img src="assets/images/flipbooks/diabetes-ninos.jpg" alt="Diabetes niños verdades">
+        <div class="card-title">Diabetes niños verdades</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección de Contenidos Descargables -->
+  <!-- Sección de Contenidos Descargables -->
+  <div *ngIf="activeCategory === 'downloadable'" class="downloadable-section">
+    <div class="download-container">
+      <div class="download-item">
+        <h3>El Plato Saludable</h3>
+        <a href="assets/descargarle-materialeducativo/el_plato_saludable.pdf" download class="download-btn">Descargar</a>
+      </div>
+      
+      <div class="download-item">
+        <h3>Técnica De Aplicación De Insulina</h3>
+        <a href="assets/descargarle-materialeducativo/Fitter.pdf" download class="download-btn">Descargar</a>
+      </div>
+      
+      <div class="download-item">
+        <h3>Guía Nutricional</h3>
+        <a href="assets/descargarle-materialeducativo/guia nutricional.pdf" download class="download-btn">Descargar</a>
+      </div>
+      
+      <div class="download-item">
+        <h3>Inventario De Alimentos</h3>
+        <a href="assets/descargarle-materialeducativo/LIBRO DE ALIMENTOS (1).pdf" download class="download-btn">Descargar</a>
+      </div>
+      
+      <div class="download-item">
+        <h3>¿Que Es La Diabetes?</h3>
+        <a href="assets/descargarle-materialeducativo/que_es_la_diabetes.pdf" download class="download-btn">Descargar</a>
+      </div>
+      
+      <div class="download-item">
+        <h3>Refrigerio Saludable</h3>
+        <a href="assets/descargarle-materialeducativo/refrigerio_saludable.pdf" download class="download-btn">Descargar</a>
+      </div>
+      
+      <div class="download-item">
+        <h3>Resolución Día De La Diabetes</h3>
+        <a href="assets/descargarle-materialeducativo/Resolucion_Diabetes.pdf" download class="download-btn">Descargar</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Sección de Podcasts -->
+
+  <div *ngIf="activeCategory === 'podcast'" class="content-section">
+    <div class="content-grid">
+      <!-- Primer enlace de Spotify -->
+      <div class="spotify-container">
+        <iframe style="border-radius:12px"
+          src="https://open.spotify.com/episode/65p2dSYHTjd9m05kt4gFPS?si=arFfw6fsTyqQWGproHp4_A"
+          width="100%" height="152" frameBorder="0"
+          allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+      </div>
+  
+      <!-- Segundo enlace de Spotify -->
+      <div class="spotify-container">
+        <iframe style="border-radius:12px"
+          src="https://open.spotify.com/episode/7wYWfzrBKU4x6jBk2xFPeV?si=bvo6pNjWRHW3rPNmwURDMg"
+          width="100%" height="152" frameBorder="0"
+          allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+      </div>
+  
+      <!-- Tercer enlace de Spotify -->
+      <div class="spotify-container">
+        <iframe style="border-radius:12px"
+          src="https://open.spotify.com/episode/6Mi3Ke9uiIMXK1LDcAv5pU?si=5qiHQtsJRTWi4csb63Xw2A"
+          width="100%" height="152" frameBorder="0"
+          allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+ <!--CARRUSEL DE IMAGENES -->
+ <div class="container mt-4 position-relative">
+  <button class="custom-arrow custom-prev" onclick="$('.empresas-carousel').slick('slickPrev')">&lt;</button>
+  <div class="slick-carousel empresas-carousel">
+      <div><img src="assets/empresas/club.png" class="empresas-img" alt="Imagen 1"></div>
+      <div><img src="assets/empresas/federacion.png" class="empresas-img" alt="Imagen 2"></div>
+      <div><img src="assets/empresas/insulin.png" class="empresas-img" alt="Imagen 3"></div>
+      <div><img src="assets/empresas/lapa.png" class="empresas-img" alt="Imagen 4"></div>
+      <div><img src="assets/empresas/life.png" class="empresas-img" alt="Imagen 5"></div>
+      <div><img src="assets/empresas/renarec.png" class="empresas-img" alt="Imagen 6"></div>
+      <div><img src="assets/empresas/Ucatolica.png" class="empresas-img" alt="Imagen 7"></div>
+      <div><img src="assets/empresas/UCuenca.png" class="empresas-img" alt="Imagen 8"></div>
+      <div><img src="assets/empresas/redcap.png" class="empresas-img" alt="Imagen 9"></div>
+  </div>
+  <button class="custom-arrow custom-next" onclick="$('.empresas-carousel').slick('slickNext')">&gt;</button>
+</div>
+
+
+
+<!--ICONOS DE REDES SOCIALES-->
+
+<!-- Sección de iconos de redes sociales -->
+<div class="social-bar">
+  <a href="https://www.tiktok.com/@casadeladiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+  <a href="https://www.facebook.com/CasaDeDiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+  <a href="https://www.instagram.com/casadeladiabetes/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+  <a href="https://x.com/i/flow/login?redirect_after_login=%2FCasaDeDiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+  <a href="https://www.youtube.com/channel/UC1YqPCb6B9XO6dHkYYXpIrg" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+</div>
+
+

@@ -1,0 +1,151 @@
+<!-- Este es un ejemplo de cómo estructurar mejor tu HTML para que sea responsive -->
+<!-- Esta estructura se aplicará a todos tus diferentes IDs -->
+
+<!-- Barra de navegación fija -->
+<header class="navbar">
+  <div class="logo-container">
+    <img src="assets/paginamagnifico/imagelogo.png" alt="Cities for better health Cuenca" class="logo">
+  </div>
+  <nav class="nav-links">
+    <ul>
+      <li><a (click)="navigateToInicio()" class="nav-link">Inicio</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Para ID 1: Contenido de lanzamiento de personaje -->
+<div *ngIf="imageId === 1">
+  <div class="actividad-contenido">
+    <!-- Sección de título -->
+    <div class="titulo-imagen">
+      <h1>Lanzamiento de Personaje</h1>
+      <h1 class="hero-subtitle">¡Magnífico ha desplegado sus alas en Cuenca!</h1>
+    </div>
+    
+    <!-- Párrafos de contenido -->
+    <p>Con colores en mis alas y salud en mi vuelo, Magnífico llega para recordarnos que cada paso cuenta en el camino hacia el bienestar. Hoy, en su presentación oficial, reafirmamos el compromiso de seguir construyendo la ciudad más saludable del Ecuador.</p>
+    
+    <p>En cada parque, en cada calle y en cada corazón cuencano, Magnífico será el símbolo de una vida más activa, consciente y llena de vitalidad. Sigamos volando juntos hacia un futuro más saludable.</p>
+    
+    <!-- Carrusel principal optimizado -->
+    <div class="container">
+      <div class="carousel-principal slick-carousel">
+        <div><img src="assets/paginamagnifico/image-details/actividad1/image1.png" alt="Equipo Magnífico" class="empresas-img"></div>
+        <div><img src="assets/paginamagnifico/image-details/actividad1/image2.png" class="empresas-img" alt="Imagen promocional"></div>
+        <div><img src="assets/paginamagnifico/image-details/actividad1/image3.png" alt="Magnífico con asistentes" class="empresas-img"></div>
+        <div><img src="assets/paginamagnifico/image-details/actividad1/image4.png" alt="Magnífico con asistentes" class="empresas-img"></div>
+        <div><img src="assets/paginamagnifico/image-details/actividad1/image5.png" alt="Magnífico con asistentes" class="empresas-img"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Separador -->
+  <div class="separador"></div>
+  
+  <!-- Logos de patrocinadores -->
+  <div class="container">
+    <div class="empresas-carousel slick-carousel">
+      <div><img src="assets/paginamagnifico/logosempresas/amorcuenca.png" alt="Amor por Cuenca" class="empresas-img"></div>
+      <div><img src="assets/paginamagnifico/logosempresas/alcaldiacuenca.png" alt="Cuenca" class="empresas-img"></div>
+      <div><img src="assets/paginamagnifico/logosempresas/salud.png" alt="Salud" class="empresas-img"></div>
+      <div><img src="assets/paginamagnifico/logosempresas/novo.png" alt="Novo Nordisk" class="empresas-img"></div>
+      <div><img src="assets/paginamagnifico/logosempresas/casadeladiabetes.png" alt="Casa de la Diabetes" class="empresas-img"></div>
+    </div>
+  </div>
+  
+  <!-- Separador -->
+  <div class="separador"></div>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="social-links">
+      <p>Síguenos en:</p>
+      <div class="social-icons">
+        <a href="https://www.tiktok.com/@casadeladiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/CasaDeDiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/casadeladiabetes/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2FCasaDeDiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UC1YqPCb6B9XO6dHkYYXpIrg" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Cities for Better Health - Todos los derechos reservados</p>
+  </footer>
+</div>
+
+<!-- Para ID 2: Página de celebraciones -->
+<div *ngIf="imageId === 2">
+  <!-- Primera actividad -->
+  <div class="actividad-contenido">
+    <div class="titulo-imagen">
+      <h1>Celebración del Día de la Mujer en el Tranvía de Cuenca</h1>
+    </div>
+    
+    <p>En este 14 de febrero, Magnífico llevó su mensaje de bienestar a bordo del Tranvía de Cuenca, compartiendo rosas y recordando que cuidarnos también es un acto de amor.</p>
+    
+    <p>Con colores en sus alas y salud en su vuelo, sigue recorriendo la ciudad para inspirar hábitos saludables y fortalecer el compromiso de Cuenca con el bienestar. Cada pequeño gesto cuenta en este gran viaje hacia una vida más saludable.</p>
+    
+    <!-- Carrusel principal -->
+    <div class="container">
+      <div class="carousel-principal slick-carousel">
+        <div><img src="assets/paginamagnifico/image-details/actividad2/image1.png" alt="Equipo Magnífico" class="empresas-img"></div>
+        <div><img src="assets/paginamagnifico/image-details/actividad2/image2.png" alt="Presentación de Magnífico" class="empresas-img"></div>
+        <div><img src="assets/paginamagnifico/image-details/actividad2/image3.png" alt="Magnífico con asistentes" class="empresas-img"></div>
+        <div><img src="assets/paginamagnifico/image-details/actividad2/image4.png" alt="Magnífico con asistentes" class="empresas-img"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Segunda actividad -->
+  <div class="actividad-contenido">
+    <div class="titulo-imagen">
+      <h1>𝐔𝐧 𝐯𝐮𝐞𝐥𝐨 𝐞𝐬𝐩𝐞𝐜𝐢𝐚𝐥 𝐩𝐨𝐫 𝐞𝐥 𝐃í𝐚 𝐝𝐞𝐥 𝐀𝐦𝐨𝐫 𝐲 𝐥𝐚 𝐀𝐦𝐢𝐬𝐭𝐚𝐝</h1>
+    </div>
+    
+    <p>Hoy 8 de marzo compartimos un mensaje especial con las pasajeras del Tranvía de Cuenca, reconociendo su fuerza, dedicación y esencia en el Día de la Mujer. A través de pequeños gestos, como la entrega de rosas y tarjetas con mensajes inspiradores, recordamos que cada mujer merece ser celebrada y valorada.</p>
+    
+    <p>Sigamos construyendo juntos un mundo donde cada mujer brille con su luz propia.</p>
+    
+    <!-- Carrusel principal -->
+    <div class="container">
+      <div class="carousel-principal slick-carousel">
+        <div><img src="assets/paginamagnifico/image-details/actividad2/image5.png" alt="Equipo Magnífico" class="empresas-img"></div>
+        <div><img src="assets/paginamagnifico/image-details/actividad2/image6.png" alt="Presentación de Magnífico" class="empresas-img"></div>
+        <div><img src="assets/paginamagnifico/image-details/actividad2/image7.png" alt="Magnífico con asistentes" class="empresas-img"></div>
+        <div><img src="assets/paginamagnifico/image-details/actividad2/image8.png" alt="Magnífico con asistentes" class="empresas-img"></div>
+        <div><img src="assets/paginamagnifico/image-details/actividad2/image9.png" alt="Magnífico con asistentes" class="empresas-img"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Separador -->
+  <div class="separador"></div>
+  
+  <!-- Logos de patrocinadores -->
+  <div class="container">
+    <div class="empresas-carousel slick-carousel">
+      <div><img src="assets/paginamagnifico/logosempresas/amorcuenca.png" alt="Amor por Cuenca" class="empresas-img"></div>
+      <div><img src="assets/paginamagnifico/logosempresas/alcaldiacuenca.png" alt="Cuenca" class="empresas-img"></div>
+      <div><img src="assets/paginamagnifico/logosempresas/salud.png" alt="Salud" class="empresas-img"></div>
+      <div><img src="assets/paginamagnifico/logosempresas/novo.png" alt="Novo Nordisk" class="empresas-img"></div>
+      <div><img src="assets/paginamagnifico/logosempresas/casadeladiabetes.png" alt="Casa de la Diabetes" class="empresas-img"></div>
+    </div>
+  </div>
+  
+  <!-- Separador -->
+  <div class="separador"></div>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="social-links">
+      <p>Síguenos en:</p>
+      <div class="social-icons">
+        <a href="https://www.tiktok.com/@casadeladiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/CasaDeDiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/casadeladiabetes/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2FCasaDeDiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UC1YqPCb6B9XO6dHkYYXpIrg" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Cities for Better Health - Todos los derechos reservados</p>
+  </footer>
+</div>

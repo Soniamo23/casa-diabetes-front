@@ -1,0 +1,154 @@
+<h1>Finalizar compra</h1>
+
+<div class="contenedor-pago">
+  <div class="formulario-facturacion">
+    <h2>Detalles de facturación</h2>
+    
+    <form [formGroup]="formularioPago">
+      <div class="grupo-formulario">
+        <label for="nombre">Nombre <span class="obligatorio">*</span></label>
+        <input type="text" id="nombre" formControlName="nombre" required>
+      </div>
+      
+      <div class="grupo-formulario">
+        <label for="apellidos">Apellidos <span class="obligatorio">*</span></label>
+        <input type="text" id="apellidos" formControlName="apellidos" required>
+      </div>
+      
+      <div class="grupo-formulario">
+        <label for="empresa">Nombre de la empresa (opcional)</label>
+        <input type="text" id="empresa" formControlName="empresa">
+      </div>
+      
+      <div class="grupo-formulario">
+        <label for="pais">País <span class="obligatorio">*</span></label>
+        <select id="pais" formControlName="pais" required>
+          <option value="Ecuador">Ecuador</option>
+        </select>
+      </div>
+      
+      <div class="grupo-formulario">
+        <label for="direccion">Dirección de la calle <span class="obligatorio">*</span></label>
+        <input type="text" id="direccion" formControlName="direccion" placeholder="Número de la casa y nombre de la calle" required>
+      </div>
+      
+      <div class="grupo-formulario">
+        <label for="apartamento">Apartamento, habitación, escalera, etc. (opcional)</label>
+        <input type="text" id="apartamento" formControlName="apartamento" placeholder="Apartamento, habitación, etc. (opcional)">
+      </div>
+      
+      <div class="grupo-formulario">
+        <label for="ciudad">Ciudad <span class="obligatorio">*</span></label>
+        <input type="text" id="ciudad" formControlName="ciudad" required>
+      </div>
+      
+      <div class="grupo-formulario">
+        <label for="provincia">Provincia <span class="obligatorio">*</span></label>
+        <select id="provincia" formControlName="provincia" required>
+          <option value="Azuay">Azuay</option>
+        </select>
+      </div>
+      
+      <div class="grupo-formulario">
+        <label for="telefono">Teléfono <span class="obligatorio">*</span></label>
+        <input type="tel" id="telefono" formControlName="telefono" required>
+      </div>
+      
+      <div class="grupo-formulario">
+        <label for="email">Dirección de correo electrónico <span class="obligatorio">*</span></label>
+        <input type="email" id="email" formControlName="email" required>
+      </div>
+      
+      <div class="grupo-formulario checkbox">
+        <input type="checkbox" id="direccion-diferente" formControlName="direccionDiferente">
+        <label for="direccion-diferente">¿Enviar a una dirección diferente?</label>
+      </div>
+      
+      <div class="grupo-formulario">
+        <label for="notas">Notas del pedido (opcional)</label>
+        <textarea id="notas" formControlName="notas" placeholder="Notas sobre tu pedido, por ejemplo, notas especiales para la entrega."></textarea>
+      </div>
+    </form>
+  </div>
+
+  <div class="resumen-pedido">
+    <h2>Tu pedido</h2>
+    
+    <div class="detalles-pedido">
+      <div class="cabecera-pedido">
+        <span>Producto</span>
+        <span>Subtotal</span>
+      </div>
+      
+      <div class="item-pedido" *ngFor="let item of carrito">
+        <span>{{ item.nombre }} × {{ item.qty }}</span>
+        <span>${{ (item.precio * item.qty).toFixed(2) }}</span>
+      </div>
+      
+      <div class="subtotal-pedido">
+        <span>Subtotal</span>
+        <span>${{ calcularSubtotal().toFixed(2) }}</span>
+      </div>
+      
+      <div class="envio-pedido">
+        <span>Envío</span>
+        <div class="opciones-envio">
+          <div class="opcion-envio">
+            <input type="radio" id="envio-azuay" name="metodoEnvio" formControlName="metodoEnvio" value="azuay">
+            <label for="envio-azuay">Azuay: $3.00</label>
+          </div>
+          <div class="opcion-envio">
+            <input type="radio" id="recogida-local" name="metodoEnvio" formControlName="metodoEnvio" value="local">
+            <label for="recogida-local">Recogida local</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="total-pedido">
+        <span>Total</span>
+        <span>${{ calcularTotal().toFixed(2) }}</span>
+      </div>
+      
+      <div class="botones-pedido">
+        <button class="boton-volver" (click)="volverAlCarrito()">Volver al carrito</button>
+        <button class="boton-realizar-pedido" [disabled]="!formularioPago.valid" (click)="realizarPedido()">Realizar pedido</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARRUSEL DE IMÁGENES - MOVIDO FUERA DEL RESUMEN DE PEDIDO -->
+<div class="container mt-4 position-relative">
+  <button class="custom-arrow custom-prev" onclick="$('.empresas-carousel').slick('slickPrev')">&lt;</button>
+  <div class="slick-carousel empresas-carousel">
+    <div><img src="assets/empresas/club.png" class="empresas-img" alt="Imagen 1"></div>
+    <div><img src="assets/empresas/federacion.png" class="empresas-img" alt="Imagen 2"></div>
+    <div><img src="assets/empresas/insulin.png" class="empresas-img" alt="Imagen 3"></div>
+    <div><img src="assets/empresas/lapa.png" class="empresas-img" alt="Imagen 4"></div>
+    <div><img src="assets/empresas/life.png" class="empresas-img" alt="Imagen 5"></div>
+    <div><img src="assets/empresas/renarec.png" class="empresas-img" alt="Imagen 6"></div>
+    <div><img src="assets/empresas/Ucatolica.png" class="empresas-img" alt="Imagen 7"></div>
+    <div><img src="assets/empresas/UCuenca.png" class="empresas-img" alt="Imagen 8"></div>
+    <div><img src="assets/empresas/redcap.png" class="empresas-img" alt="Imagen 9"></div>
+  </div>
+  <button class="custom-arrow custom-next" onclick="$('.empresas-carousel').slick('slickNext')">&gt;</button>
+</div>
+
+<!-- ICONOS DE REDES SOCIALES - MOVIDO FUERA DEL RESUMEN DE PEDIDO -->
+<div class="social-bar">
+  <a href="https://www.tiktok.com/@casadeladiabetes" target="_blank" class="social-icon">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
+  <a href="https://www.facebook.com/CasaDeDiabetes" target="_blank" class="social-icon">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+  <a href="https://www.instagram.com/casadeladiabetes/" target="_blank" class="social-icon">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="https://x.com/CasaDeDiabetes" target="_blank" class="social-icon">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+  <a href="https://www.youtube.com/channel/UC1YqPCb6B9XO6dHkYYXpIrg" target="_blank" class="social-icon">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
+</div>

@@ -1,0 +1,164 @@
+<div class="findrisk-outer-container">
+    <div class="findrisk-container">
+      <h1>Findrisk</h1>
+      
+      
+      <form [formGroup]="findriskForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>Seleccione su edad:</label>
+          <span class="required-field">* Campo requerido</span>
+          <div class="radio-options">
+            <div class="radio-option">
+              <input type="radio" id="edad1" formControlName="edad" value="0">
+              <label for="edad1">Menos de 45 años</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="edad2" formControlName="edad" value="2">
+              <label for="edad2">45-54 años</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="edad3" formControlName="edad" value="3">
+              <label for="edad3">55-64 años</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="edad4" formControlName="edad" value="4">
+              <label for="edad4">Más de 64 años</label>
+            </div>
+          </div>
+          <a class="reset-link" (click)="resetControl('edad')">Restablecer el valor</a>
+        </div>
+  
+        <div class="form-group">
+          <label for="altura">Ingrese la altura en cm:</label>
+          <span class="required-field">* Campo requerido</span>
+          <input type="number" id="altura" formControlName="altura">
+        </div>
+  
+        <div class="form-group">
+          <label for="peso">Ingrese el peso en kg:</label>
+          <span class="required-field">* Campo requerido</span>
+          <input type="number" id="peso" formControlName="peso">
+        </div>
+  
+        <div class="form-group">
+          <label for="imc">IMC:</label>
+          <input type="text" id="imc" [value]="calcularIMC()" readonly>
+        </div>
+  
+        <div class="form-group">
+          <label>Sexo:</label>
+          <span class="required-field">* Campo requerido</span>
+          <div class="radio-options">
+            <div class="radio-option">
+              <input type="radio" id="sexoHombre" formControlName="sexo" value="hombre">
+              <label for="sexoHombre">Hombre</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="sexoMujer" formControlName="sexo" value="mujer">
+              <label for="sexoMujer">Mujer</label>
+            </div>
+          </div>
+          <a class="reset-link" (click)="resetControl('sexo')">Restablecer el valor</a>
+        </div>
+  
+        <div class="form-group">
+          <label>¿Realiza habitualmente al menos 30 minutos de actividad física, en el trabajo y/o en el tiempo libre?</label>
+          <span class="required-field">* Campo requerido</span>
+          <div class="radio-options">
+            <div class="radio-option">
+              <input type="radio" id="actividadSi" formControlName="actividad" value="0">
+              <label for="actividadSi">Sí</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="actividadNo" formControlName="actividad" value="2">
+              <label for="actividadNo">No</label>
+            </div>
+          </div>
+          <a class="reset-link" (click)="resetControl('actividad')">Restablecer el valor</a>
+        </div>
+  
+        <div class="form-group">
+          <label>¿Con qué frecuencia come verduras o fruta?</label>
+          <span class="required-field">* Campo requerido</span>
+          <div class="radio-options">
+            <div class="radio-option">
+              <input type="radio" id="frutasDiario" formControlName="frutas" value="0">
+              <label for="frutasDiario">Cada día</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="frutasNo" formControlName="frutas" value="1">
+              <label for="frutasNo">No cada día</label>
+            </div>
+          </div>
+          <a class="reset-link" (click)="resetControl('frutas')">Restablecer el valor</a>
+        </div>
+  
+        <div class="form-group">
+          <label>¿Toma medicación para la presión regularmente?</label>
+          <span class="required-field">* Campo requerido</span>
+          <div class="radio-options">
+            <div class="radio-option">
+              <input type="radio" id="medicacionSi" formControlName="medicacion" value="2">
+              <label for="medicacionSi">Sí</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="medicacionNo" formControlName="medicacion" value="0">
+              <label for="medicacionNo">No</label>
+            </div>
+          </div>
+          <a class="reset-link" (click)="resetControl('medicacion')">Restablecer el valor</a>
+        </div>
+  
+        <div class="form-group">
+          <label>¿Le han encontrado alguna vez valores de glucosa (azúcar) altos?</label>
+          <span class="required-field">* Campo requerido</span>
+          <div class="note-text">(p.e. en un control médico, durante una enfermedad, durante el embarazo)</div>
+          <div class="radio-options">
+            <div class="radio-option">
+              <input type="radio" id="glucosaSi" formControlName="glucosa" value="5">
+              <label for="glucosaSi">Sí</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="glucosaNo" formControlName="glucosa" value="0">
+              <label for="glucosaNo">No</label>
+            </div>
+          </div>
+          <a class="reset-link" (click)="resetControl('glucosa')">Restablecer el valor</a>
+        </div>
+  
+        <div class="form-group">
+          <label>¿Alguno de sus familiares allegados u otros parientes ha sido diagnosticado con diabetes?</label>
+          <span class="required-field">* Campo requerido</span>
+          <div class="note-text">(tipo 1 o tipo 2)</div>
+          <div class="radio-options">
+            <div class="radio-option">
+              <input type="radio" id="familiaNinguno" formControlName="familia" value="0">
+              <label for="familiaNinguno">No</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="familiaExtendida" formControlName="familia" value="3">
+              <label for="familiaExtendida">Sí: abuelos, tías, tíos, primos hermanos</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="familiaNuclear" formControlName="familia" value="5">
+              <label for="familiaNuclear">Sí: padres, hermanos o hijos</label>
+            </div>
+          </div>
+          <a class="reset-link" (click)="resetControl('familia')">Restablecer el valor</a>
+        </div>
+  
+        <div class="form-group">
+          <label for="puntaje">Puntaje total:</label>
+          <input type="text" id="puntaje" [value]="calcularPuntaje()" readonly class="puntaje-input">
+        </div>
+  
+        <div class="resultado" *ngIf="mostrarResultado">
+          <p>Enhorabuena, tiene bajo riesgo de padecer diabetes. Sigue manteniendo un estilo de vida saludable.</p>
+        </div>
+  
+        <div class="form-actions">
+          <button type="submit" class="submit-button">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>

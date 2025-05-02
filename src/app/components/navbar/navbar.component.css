@@ -1,0 +1,192 @@
+/* ===================== */
+/* ✅ NAVBAR */
+/* ===================== */
+.navbar {
+    background-color: white;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 20px;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Logo alineado a la izquierda */
+  .logo-container {
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
+  
+  /* ===================== */
+  /*  Menú en DOS FILAS */
+  /* ===================== */
+  .menu-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 5px;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .nav-item {
+    text-align: center;
+  }
+  
+  .nav-link {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    display: block;
+    padding: 4px 8px;
+    white-space: nowrap;
+  }
+  
+  .nav-link:hover {
+    color: #0056b3;
+  }
+  
+  .nav-link.active {
+    text-decoration: underline;
+    text-decoration-color: orange;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 3px;
+  }
+  
+  /* ===================== */
+  /*  Botón de donación */
+  /* ===================== */
+  .boton-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn-donacion {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .btn-donacion:hover {
+    background-color: #0056b3;
+  }
+  
+  .emoji {
+    margin-right: 5px;
+  }
+  
+  /* Sólo mostramos este .boton-container en desktop */
+  .desktop-only {
+    display: flex;
+  }
+  
+  /* ===================== */
+  /*  Mobile Actions (toggler + dona) */
+  /* ===================== */
+  .mobile-actions {
+    display: none; /* oculto en desktop */
+    align-items: center;
+  }
+  
+  /* Toggler oculto en desktop */
+  .navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007bff;
+    margin-right: 10px;
+  }
+  
+  /* ===================== */
+  /*  RESPONSIVE */
+  /* ===================== */
+  @media (max-width: 992px) {
+    .navbar-nav {
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(3, auto);
+      gap: 4px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* 1) Container en columna */
+    .container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    /* 2) Escondemos el botón de donación desktop */
+    .desktop-only {
+      display: none;
+    }
+  
+    /* 3) Mostramos mobile-actions: hamburguesa + dona (mobile-only) */
+    .mobile-actions {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 20px;
+      margin: 10px 0;
+    }
+    .navbar-toggler {
+      display: block;
+    }
+    .mobile-only {
+      display: flex;
+    }
+  
+    /* 4) Menú colapsado */
+    .menu-container {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+    .menu-container.active {
+      display: flex;
+    }
+  
+    .navbar-nav {
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(5, auto);
+      gap: 2px;
+      align-items: center;
+    }
+  
+    .nav-item {
+      padding: 4px 0;
+      width: 100%;
+    }
+  
+    .nav-link {
+      padding: 4px 8px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+  

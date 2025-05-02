@@ -1,0 +1,79 @@
+<!-- Vista de tarjetas -->
+<div *ngIf="!selectedId" class="cards-container">
+    <div class="card" (click)="goTo(1)">
+      <img src="assets/encuestanacional/georeferenciados.png" alt="Datos georeferenciados">
+      
+    </div>
+    <div class="card" (click)="goTo(2)">
+      <img src="assets/encuestanacional/resultadosyficha.png" alt="Resultados y ficha técnica">
+      
+    </div>
+  </div>
+  
+  <!-- Vista de detalle -->
+  <div *ngIf="selectedId" class="detail-container">
+    <button (click)="goBack()">← Volver</button>
+  
+    <ng-container *ngIf="selectedId === 1">
+      <h2>Datos Georeferenciados de la Encuesta</h2>
+      <!-- tu iframe o contenido para georreferenciados -->
+      <iframe src="" width="100%" height="500"></iframe>
+    </ng-container>
+  
+    <ng-container *ngIf="selectedId === 2">
+      <h2>Resultados y Ficha Técnica</h2>
+      <!-- tu iframe o contenido de resultados -->
+      <iframe src="" width="100%" height="500"></iframe>
+    </ng-container>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  <!-- CONTENEDOR DE TODO -->
+<div class="partners-section">
+  
+    <!-- CARRUSEL DE IMÁGENES -->
+    <div class="container position-relative">
+      <button class="custom-arrow custom-prev" onclick="$('.empresas-carousel').slick('slickPrev')">&lt;</button>
+      <div class="slick-carousel empresas-carousel">
+        <div><img src="assets/empresas/club.png" class="empresas-img" alt="Imagen 1"></div>
+        <div><img src="assets/empresas/federacion.png" class="empresas-img" alt="Imagen 2"></div>
+        <div><img src="assets/empresas/insulin.png" class="empresas-img" alt="Imagen 3"></div>
+        <div><img src="assets/empresas/lapa.png" class="empresas-img" alt="Imagen 4"></div>
+        <div><img src="assets/empresas/life.png" class="empresas-img" alt="Imagen 5"></div>
+        <div><img src="assets/empresas/renarec.png" class="empresas-img" alt="Imagen 6"></div>
+        <div><img src="assets/empresas/Ucatolica.png" class="empresas-img" alt="Imagen 7"></div>
+        <div><img src="assets/empresas/UCuenca.png" class="empresas-img" alt="Imagen 8"></div>
+        <div><img src="assets/empresas/redcap.png" class="empresas-img" alt="Imagen 9"></div>
+      </div>
+      <button class="custom-arrow custom-next" onclick="$('.empresas-carousel').slick('slickNext')">&gt;</button>
+    </div>
+    
+    <!-- ICONOS DE REDES SOCIALES -->
+    <div class="social-bar">
+      <a href="https://www.tiktok.com/@casadeladiabetes" target="_blank" class="social-icon">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+      <a href="https://www.facebook.com/CasaDeDiabetes" target="_blank" class="social-icon">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/casadeladiabetes/" target="_blank" class="social-icon">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://x.com/CasaDeDiabetes" target="_blank" class="social-icon">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UC1YqPCb6B9XO6dHkYYXpIrg" target="_blank" class="social-icon">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </div>
+  
+  </div>
+  

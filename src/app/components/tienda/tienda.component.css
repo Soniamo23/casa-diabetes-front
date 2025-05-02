@@ -1,0 +1,386 @@
+/* Contenedor del título de la tienda */
+.titulo-tienda-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  gap: 20px;
+}
+
+/* Título de la tienda */
+.titulo-tienda {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Icono de flecha */
+.titulo-tienda .arrow-icon {
+  color: orange;
+  font-size: 28px;
+}
+
+/* Título */
+.titulo-tienda h2 {
+  margin: 0;
+  font-size: 26px;
+  color: #1d428c;
+}
+
+/* Contenedor de la tienda */
+.tienda-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Estilos de la barra lateral */
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.sidebar h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.price-slider {
+  margin-bottom: 20px;
+}
+
+.price-slider input {
+  width: 100%;
+}
+
+.price-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.categorias div {
+  margin-bottom: 5px;
+}
+
+/* Grid de productos */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  flex-grow: 1;
+}
+
+/* Tarjeta de producto */
+.producto-card {
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+/* Contenedor de imagen */
+.imagen-container {
+  width: 100%;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.imagen-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Título del producto */
+.producto-card h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  color: #0056b3;
+}
+
+/* Precio */
+.precio {
+  margin: 5px 0 10px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Botón naranja */
+.btn-naranja {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-naranja:hover {
+  background-color: #e68a00;
+}
+
+/* Paginación */
+.paginacion {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 5px;
+}
+
+.paginacion button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #0056b3;
+  color: white;
+  cursor: pointer;
+}
+
+.paginacion button.active {
+  background-color: #003366;
+}
+
+.paginacion button.active-orange {
+  background-color: #ff9800;
+}
+
+/* Contenedor de búsqueda */
+.busqueda-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.input-busqueda {
+  padding: 6px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-reiniciar {
+  margin-top: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-reiniciar:hover {
+  background-color: #e0e0e0;
+}
+
+/* Carrusel de empresas */
+.empresas-carousel {
+  position: relative;
+  margin: 60px auto !important;
+  overflow: hidden !important;
+  width: 60%;
+}
+
+.empresas-img {
+  max-height: 40px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Flechas personalizadas */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: none;
+  color: #0047AB; /* Color azul para las flechas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 40px; /* Tamaño grande para las flechas */
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.custom-arrow:hover {
+  color: #002D72; /* Azul más oscuro al pasar el cursor */
+}
+
+.custom-prev {
+  left: 180px; /* Ajusta la posición de la flecha izquierda */
+}
+
+.custom-next {
+  right: 180px; /* Ajusta la posición de la flecha derecha */
+}
+
+/* Barra azul para las redes sociales */
+.social-bar {
+  background-color: #1d428c; /* Azul */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Estilos para los iconos de redes sociales */
+.social-icon {
+  color: white;
+  font-size: 24px;
+  margin: 0 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #FFD700; /* Amarillo dorado al pasar el mouse */
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  .titulo-tienda-container {
+      flex-direction: column; /* Cambiar a columna en pantallas más pequeñas */
+      align-items: center; /* Centrar los elementos */
+      padding: 15px; /* Reducir el padding */
+  }
+
+  .titulo-tienda h2 {
+      font-size: 22px; /* Ajustar el tamaño del título */
+  }
+
+  .tienda-container {
+      flex-direction: column; /* Cambiar a columna en pantallas más pequeñas */
+      padding: 15px; /* Reducir el padding */
+  }
+
+  .sidebar {
+      width: 100%; /* Hacer que la barra lateral ocupe el 100% */
+      margin-bottom: 20px; /* Espacio entre la barra lateral y los productos */
+  }
+
+  .productos-grid {
+      grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas en tablets */
+  }
+
+  .input-busqueda {
+      width: 100%; /* Hacer que el campo de búsqueda ocupe el 100% */
+  }
+
+  .btn-reiniciar {
+      width: 100%; /* Hacer que el botón de reinicio ocupe el 100% */
+  }
+
+  
+ 
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+  .titulo-tienda h2 {
+      font-size: 20px; /* Ajustar el tamaño del título */
+  }
+
+  .productos-grid {
+      grid-template-columns: 1fr; /* Cambiar a 1 columna en móviles */
+  }
+
+  .sidebar {
+      width: 100%; /* Hacer que la barra lateral ocupe el 100% */
+      margin-bottom: 15px; /* Espacio entre la barra lateral y los productos */
+  }
+
+  .input-busqueda {
+      width: 100%; /* Hacer que el campo de búsqueda ocupe el 100% */
+  }
+
+  .btn-reiniciar {
+      width: 100%; /* Hacer que el botón de reinicio ocupe el 100% */
+  }
+
+  
+}
+
+/* ====== CARRUSEL DE EMPRESAS ====== */
+.empresas-carousel {
+  position: relative;
+  margin: 60px auto !important;
+  overflow: hidden !important;
+  width: 60%;
+}
+
+.empresas-img {
+  max-height: 40px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Flechas personalizadas */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+  color: #0047AB; /* Color azul para las flechas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 40px; /* Tamaño grande para las flechas */
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 0;
+  border-radius: 50%; /* Hacer las flechas redondas */
+}
+
+.custom-arrow:hover {
+  color: #002D72; /* Azul más oscuro al pasar el cursor */
+}
+
+.custom-prev {
+  left: 10px; /* Ajusta la posición de la flecha izquierda */
+}
+
+.custom-next {
+  right: 10px; /* Ajusta la posición de la flecha derecha */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .empresas-carousel {
+    width: 100% !important; /* Hacer que el carrusel ocupe el 100% en pantallas pequeñas */
+  }
+
+  .custom-arrow {
+    font-size: 30px; /* Reducir el tamaño de las flechas en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-arrow {
+    font-size: 24px; /* Ajustar aún más el tamaño de las flechas en móviles */
+  }
+}

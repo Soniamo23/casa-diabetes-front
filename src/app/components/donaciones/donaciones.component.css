@@ -1,0 +1,467 @@
+/* ====== SECCIÓN ACTIVIDADES (CON FONDO AZUL) ====== */
+.activities-section {
+  background-color: #008cdd; /* Azul del carrusel */
+  padding: 30px 20px;
+  color: white; /* Color del texto */
+  text-align: center;
+}
+
+/* Contenedor con fondo azul */
+.activities-content {
+  background-color: #008cdd;
+  padding: 30px 20px;
+  border-radius: 8px;
+  color: white;
+}
+
+/* Título de la sección */
+.activities-content .section-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+/* Flecha antes del título */
+.activities-content .section-title::before {
+  content: ">";
+  color: #0056b3; /* Azul oscuro */
+  margin-right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* ====== ESTILOS DEL CARRUSEL ====== */
+.slick-carousel {
+  margin: 0 auto;
+  width: 65%;
+  padding: 10px 0;
+  position: relative;
+}
+
+/* Imágenes dentro del carrusel */
+.carousel-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  background: none !important;
+  border: none;
+  max-height: 400px; /* Altura máxima pero manteniendo proporción */
+}
+
+/* Flechas del carrusel */
+.slick-prev, .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-prev {
+  left: -30px;
+}
+
+.slick-next {
+  right: -30px;
+}
+
+/* Puntos de navegación */
+.slick-dots {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.slick-dots li button {
+  background-color: #008cdd;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #0056b3;
+}
+
+.empresas-carousel {
+  position: relative;
+  margin: 60px auto !important;
+  overflow: hidden !important;
+  width: 60%;
+}
+
+.empresas-img {
+  max-height: 40px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: none;
+  color: #0047AB; /* Color azul para las flechas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 40px; /* Tamaño grande para las flechas */
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.custom-arrow:hover {
+  color: #002D72; /* Azul más oscuro al pasar el cursor */
+}
+
+.custom-prev {
+  left: 180px; /* Ajusta la posición de la flecha izquierda */
+}
+
+.custom-next {
+  right: 180px; /* Ajusta la posición de la flecha derecha */
+}
+
+/* ====== SECCIÓN DONACIONES ====== */
+.donation-container {
+  background-color: #1e4388; /* Azul oscuro como en la imagen */
+  color: white;
+  padding: 50px 20px;
+  width: 100%;
+  margin: 0;
+}
+
+/* Título de donaciones con flecha */
+.donation-title {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  padding: 0 20px;
+}
+
+.arrow-icon {
+  color: #ff7f00; /* Color naranja para la flecha */
+  font-size: 24px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.donation-title h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+}
+
+/* Texto de donaciones */
+.donation-description {
+  font-family: "Quicksand", Sans-serif; /* Fuente Quicksand */
+  font-size: 20px; /* Tamaño de fuente como en el ejemplo */
+  font-weight: 600; /* Peso de la fuente semibold */
+  color: var(--e-global-color-nvsecondaryaccent); /* Utilizando la variable de color */
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.5;
+  text-align: justify;
+  padding: 0 20px;
+}
+
+/* Contenedor de métodos de donación */
+.donation-methods {
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  margin: 40px auto 0;
+  gap: 60px;
+}
+
+/* Columnas de donaciones */
+.donation-left, .donation-right {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  max-width: 350px;
+}
+
+/* Títulos de métodos de donación */
+.donation-left h3, .donation-right h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+/* Detalles de la donación */
+.donation-details p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Botón de donación de PayPal */
+.donate-button {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #ffc439; /* Color amarillo de PayPal */
+  color: #003087; /* Color azul de PayPal */
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.donate-button:hover {
+  background-color: #ffaa00;
+}
+
+/* 🔹 Barra azul para las redes sociales */
+.social-bar {
+  background-color: #1d428c; /* Azul */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* 🔹 Estilos para los iconos */
+.social-icon {
+  color: white;
+  font-size: 24px;
+  margin: 0 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #FFD700; /* Amarillo dorado al pasar el mouse */
+}
+
+/* ====== MEDIA QUERIES PARA RESPONSIVE ====== */
+
+/* Tablets y dispositivos medianos */
+@media (max-width: 991px) {
+  .slick-carousel, .empresas-carousel {
+    width: 90%;
+  }
+  
+  .donation-description {
+    font-size: 18px;
+  }
+  
+  .activities-content .section-title {
+    font-size: 24px;
+  }
+  
+  /* Ajustes para flechas de carrusel de empresas en tablets */
+  .empresas-carousel .custom-prev {
+    left: -25px;
+  }
+  
+  .empresas-carousel .custom-next {
+    right: -25px;
+  }
+}
+
+/* Móviles (como iPhone 12 Pro) */
+@media (max-width: 767px) {
+  /* Ajustes generales */
+  .activities-section, .activities-content {
+    padding: 20px 10px;
+  }
+  
+  /* Título más pequeño */
+  .activities-content .section-title {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  
+  .activities-content .section-title::before {
+    font-size: 22px;
+  }
+  
+  /* Ajustes del carrusel */
+ /* 7) Carrusel full width */
+ .empresas-carousel {
+  width: 100% !important;
+}
+.custom-prev { left: 10px; }
+.custom-next { right: 10px; }
+
+  
+  /* Ajustes para las flechas personalizadas */
+  .custom-arrow {
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Flechas del carrusel de empresas en móviles */
+  .empresas-carousel .custom-prev {
+    left: 10px; /* Dentro del carrusel */
+  }
+  
+  .empresas-carousel .custom-next {
+    right: 10px; /* Dentro del carrusel */
+  }
+  
+  /* Donaciones */
+  .donation-container {
+    padding: 30px 15px;
+  }
+  
+  .donation-title h2 {
+    font-size: 22px;
+  }
+  
+  .donation-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-align: left; /* Mejor legibilidad en móviles */
+  }
+  
+  /* Cambiar a estructura de columna para móviles */
+  .donation-methods {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .donation-left, .donation-right {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .donation-left h3, .donation-right h3 {
+    font-size: 20px;
+  }
+  
+  /* Botón más pequeño */
+  .donate-button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+  
+  /* Iconos sociales más pequeños */
+  .social-icon {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+}
+
+/* iPhone específicamente */
+@media (max-width: 390px) {
+  /* El iPhone 12 Pro tiene aproximadamente 390px de ancho */
+  .activities-content .section-title {
+    font-size: 18px;
+  }
+  
+  .donation-title h2 {
+    font-size: 20px;
+  }
+  
+  .donation-description {
+    font-size: 14px;
+  }
+  
+  .slick-carousel {
+    width: 90%; /* Reducido para dejar espacio a las flechas */
+  }
+  
+  /* Imágenes aún más pequeñas en iPhone */
+  .carousel-img {
+    max-height: 180px;
+  }
+  
+  /* Flechas posicionadas sobre el carrusel para iPhone */
+  .slick-prev {
+    left: 5px;
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+  
+  .slick-next {
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+  
+  /* Carrusel de empresas en pantallas muy pequeñas */
+  .empresas-carousel .custom-arrow {
+    font-size: 20px;
+    width: 22px;
+    height: 22px;
+  }
+  
+  .empresas-carousel .custom-prev {
+    left: 5px;
+  }
+  
+  .empresas-carousel .custom-next {
+    right: 5px;
+  }
+}
+
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 320px) {
+  .activities-content .section-title {
+    font-size: 16px;
+  }
+  
+  .activities-content .section-title::before {
+    font-size: 18px;
+  }
+  
+  .donation-title h2 {
+    font-size: 18px;
+  }
+  
+  .donation-left h3, .donation-right h3 {
+    font-size: 18px;
+  }
+  
+  .social-icon {
+    font-size: 18px;
+    margin: 0 8px;
+  }
+}

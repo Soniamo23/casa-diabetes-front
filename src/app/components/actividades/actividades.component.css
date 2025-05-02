@@ -1,0 +1,635 @@
+/* Estilos para el título de sección */
+.titulo-seccion {
+  color: #1d428c; /* Color azul */
+  margin: 50px 0 40px; /* Espacio arriba y abajo */
+  font-size: 35px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  text-align: center;
+}
+
+.actividades-container {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos base para el menú */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+
+/* Fondo azul continuo para toda la sección de íconos en desktop */
+.menu-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: #0097d1;
+  z-index: -1;
+  width: 100%;
+  
+}
+
+.menu button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 180px; /* Ancho fijo para desktop */
+}
+
+.icono {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icono img {
+  width: 60px;
+  height: 60px;
+  filter: brightness(0) invert(1); /* Hace que los iconos sean blancos */
+}
+
+.titulo {
+  background-color: white;
+  width: 100%;
+  padding: 10px 0;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  border-bottom: 3px solid white; /* Línea amarilla debajo del título */
+}
+
+/* Estilos para el botón activo */
+.menu button.activo .titulo {
+  border-bottom-color: #ff9800;
+  font-weight: bolder;
+}
+
+.menu button.activo .titulo {
+  border-bottom-color: #ff9800;
+}
+
+/* Estilos para el botón activo */
+.menu button.activo .titulo {
+  border-bottom-color: #ff9800;
+  font-weight: bolder;
+}
+
+.actividad-detail {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.actividad-card {
+  display: flex;
+  align-items: center;
+  background: #d3d3d3;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.actividad-image {
+  width: 100px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.actividad-content {
+  text-align: left;
+}
+
+.actividad-content h3 {
+  color: #0078D7;
+  margin-top: 0;
+}
+
+.actividad-content p {
+  margin: 10px 0;
+}
+
+.ver-mas-btn {
+  background: orange;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.mas-info {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.mas-info h4 {
+  color: #0078D7;
+}
+
+.mas-info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.mas-info .ver-mas-btn {
+  margin-top: 10px;
+}
+
+.contenido-actividad {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.boton-secundario {
+  padding: 10px 20px;
+  background-color: #0093c9;
+  border: 1px solid #0093c9;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  transition: background-color 0.3s;
+  margin: 20px 10px;
+}
+
+.boton-secundario:hover {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+/* Redes Sociales */
+.social-media-section {
+  background-color: #1D428C;
+  padding: 30px 20px;
+  color: rgb(36, 35, 35);
+  text-align: center;
+}
+
+.social-media-section .section-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.social-media-section .section-title::before {
+  content: ">";
+  color: orange;
+  margin-right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 300px;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 340px;
+  overflow: hidden;
+}
+.social-card h3 {
+  font-size: 20px;
+  color: #008cdd;
+  margin-bottom: 10px;
+}
+
+.social-card iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+.empresas-carousel {
+  position: relative;
+  margin: 60px auto !important;
+  overflow: hidden !important;
+  width: 60%;
+}
+
+.empresas-img {
+  max-height: 40px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: none;
+  color: #0047AB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.custom-arrow:hover {
+  color: #002D72;
+}
+
+.custom-prev {
+  left: 180px;
+}
+
+.custom-next {
+  right: 180px;
+}
+
+.social-bar {
+  background-color: #1d428c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 24px;
+  margin: 0 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #FFD700;
+}
+
+.spotify-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  /* Título de sección más pequeño */
+  .titulo-seccion {
+    font-size: 28px;
+    margin: 30px 0 25px;
+  }
+  
+  /* Ajuste del contenedor para móviles */
+  .actividades-container {
+    padding: 0 10px;
+    margin-top: 30px; /* Añadir margen superior para separar del menú */
+  }
+  
+  /* Redefinir completamente el diseño para móviles */
+  .menu {
+    display: block;
+    position: relative;
+    margin-bottom: 200px; /* Aumentado de 145px a 200px para dar más espacio */
+    height: auto;
+  }
+  
+  /* Ocultar fondo azul original */
+  .menu-background {
+    display: none;
+  }
+  
+  /* Primera fila de botones */
+  .menu button:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.33%;
+  }
+  
+  .menu button:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 33.33%;
+    width: 33.33%;
+  }
+  
+  .menu button:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 66.67%;
+    width: 33.33%;
+  }
+  
+  /* Segunda fila de botones */
+  .menu button:nth-child(5) {
+    position: absolute;
+    top: 85px; /* Espacio para la primera fila completa */
+    left: 0;
+    width: 50%;
+  }
+  
+  .menu button:nth-child(6) {
+    position: absolute;
+    top: 85px; /* Espacio para la primera fila completa */
+    left: 50%;
+    width: 50%;
+  }
+  
+  /* Barras azules para cada fila */
+  .menu:before,
+  .menu:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #0097d1;
+    z-index: -1;
+  }
+  
+  /* Barra azul primera fila */
+  .menu:before {
+    top: 0;
+  }
+  
+  /* Barra azul segunda fila */
+  .menu:after {
+    top: 85px; /* Misma posición que los botones de la segunda fila */
+  }
+  
+  /* Ajustes para íconos en móvil */
+  .icono {
+    padding: 10px 5px;
+    height: 40px;
+  }
+  
+  .icono img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Textos más pequeños en móviles */
+  .titulo {
+    padding: 8px 5px;
+    font-size: 14px;
+  }
+  
+  /* Asegurar separación para las tarjetas debajo del menú */
+  .tarjetas-container {
+    margin-top: 40px; /* Añadir margen superior a las tarjetas */
+  }
+
+  
+  /* Actividad: pasar a columna, cartas al 90% */
+  .actividad-detail {
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 10px;
+  }
+  
+  .actividad-card {
+    flex-direction: column;
+    text-align: center;
+    max-width: 90%;
+    gap: 10px;
+  }
+  
+  .actividad-card .actividad-image {
+    width: 80px;
+    height: 60px;
+    margin-bottom: 5px;
+  }
+  
+  .actividad-content {
+    text-align: center;
+  }
+
+  /* Botón secundario centrado */
+  .contenido-actividad {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .boton-secundario {
+    margin: 10px 0;
+  }
+
+  /* Redes Sociales: centrar título y tarjetas */
+  .social-media-section .section-title {
+    justify-content: center;
+    padding-left: 0;
+    font-size: 24px;
+  }
+  
+  .social-media-section .section-title::before {
+    padding-left: 0;
+    margin-right: 8px;
+  }
+  
+  .social-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+  
+  .social-card iframe {
+    height: 400px;
+  }
+
+  /* Carrusel de empresas al 90% */
+  .empresas-carousel {
+    width: 90% !important;
+    margin: 40px auto !important;
+  }
+  
+  .custom-prev {
+    left: 10px;
+  }
+  
+  .custom-next {
+    right: 10px;
+  }
+
+  /* Iconos sociales inferiores un poco más pequeños */
+  .social-bar {
+    flex-wrap: wrap;
+  }
+  
+  .social-icon {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+
+  /* Spotify a ancho completo */
+  .spotify-container iframe {
+    width: 100% !important;
+    height: 152px;
+  }
+}
+
+/* ===== Responsivo específico para iPhone 12 Pro (390px ancho) ===== */
+@media (max-width: 390px) {
+  .titulo-seccion {
+    font-size: 22px;
+    margin: 20px 0 15px;
+  }
+  
+  /* Ajustes específicos para iPhone 12 Pro */
+  .menu::before {
+    height: 70px; /* Altura ligeramente menor */
+  }
+  
+  .menu button {
+    flex: 1 1 33.33%;
+    max-width: 33.33%;
+    min-width: 80px;
+  }
+  
+  .icono {
+    padding: 6px 2px;
+    height: 50px;
+  }
+  
+  .icono img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .titulo {
+    font-size: 11px;
+    padding: 5px 1px;
+    margin-top: 0;
+  }
+  
+  button.activo .titulo::after {
+    width: 70%;
+    border-bottom: 2px solid #f5b400;
+  }
+  
+  .actividad-card {
+    padding: 10px;
+    max-width: 95%;
+  }
+  
+  .actividad-image {
+    width: 70px;
+    height: 55px;
+  }
+  
+  .actividad-content h3 {
+    font-size: 16px;
+  }
+  
+  .actividad-content p {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+  
+  .ver-mas-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  
+  .boton-secundario {
+    padding: 8px 15px;
+    font-size: 14px;
+    margin: 10px 5px;
+  }
+  
+  .social-media-section {
+    padding: 20px 10px;
+  }
+  
+  .social-media-section .section-title {
+    font-size: 20px;
+  }
+  
+  .social-media-section .section-title::before {
+    font-size: 24px;
+  }
+  
+  .social-card {
+    padding: 10px;
+    width: 95%;
+  }
+  
+  .social-card h3 {
+    font-size: 18px;
+  }
+  
+  .social-card iframe {
+    height: 350px;
+  }
+  
+  .empresas-carousel {
+    width: 95% !important;
+    margin: 30px auto !important;
+  }
+  
+  .empresas-img {
+    max-height: 30px;
+  }
+  
+  .custom-arrow {
+    font-size: 24px;
+  }
+  
+  .social-icon {
+    font-size: 18px;
+    margin: 0 6px;
+  }
+}
+
+/* ===== Arreglos específicos para dispositivos de altura menor ===== */
+@media (max-height: 700px) {
+  .social-card iframe {
+    height: 300px;
+  }
+  
+  .titulo-seccion {
+    margin: 15px 0;
+  }
+  
+  .actividad-detail {
+    margin: 10px 0;
+  }
+}

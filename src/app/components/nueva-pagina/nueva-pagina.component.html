@@ -1,0 +1,213 @@
+<header class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <div class="logo-container">
+        <img src="assets/paginamagnifico/imagelogo.png" alt="Cities for better health Cuenca" class="logo">
+      </div>
+  
+      <!-- Botón hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Enlaces de navegación colapsables -->
+      <nav id="mainNavbar" class="collapse navbar-collapse nav-links">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" (click)="scrollToSection('inicio')">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" (click)="scrollToSection('material')">Nuestro Material</a></li>
+          <li class="nav-item"><a class="nav-link" (click)="scrollToSection('galeria')">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" (click)="scrollToSection('acerca')">Acerca de</a></li>
+          <li class="nav-item"><a class="nav-link" (click)="scrollToSection('contacto')">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  
+  <main>
+    <!-- Sección Inicio -->
+    <section id="inicio" class="section">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1>¡HOLA! SOY<br>MAGNIFICO</h1>
+          <div class="quote-box">
+            <p>"Con colores<br>en mis alas<br>y salud en mi vuelo"</p>
+          </div>
+        </div>
+        <div class="hero-image">
+          <!-- Imagen del colibrí -->
+          <img src="assets/colibri.png" alt="Colibrí Magnífico" class="bird-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- Aquí va tu barra de navegación y otros elementos -->
+
+  
+    <div class="video-section">
+       
+        <iframe 
+            src="https://player.vimeo.com/video/1056372393" 
+            width="800" 
+            height="450" 
+            frameborder="0" 
+            allow="autoplay; fullscreen" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    
+    <!-- Sección Nuestro Material -->
+    <section id="material" class="section">
+        
+        <div class="material-content">
+            <div class="material-container">
+                <div class="image-section">
+                    <img src="assets/paginamagnifico/nuestro material/logonuestromaterial.png" alt="Descripción de la imagen" />
+                </div>
+                <div class="text-section">
+                    <h3 class="material-title">Utiliza nuestro material</h3>
+                    <p>Te invitamos a descargar y utilizar los recursos de la campaña, incluyendo banners, gráficos, ilustraciones y más. Estos materiales están disponibles para que puedas apoyar y difundir la iniciativa de Magnífico de manera creativa. ¡Úsalos y ayúdanos a llevar nuestro mensaje a más personas!</p>
+                    <button [routerLink]="['/nuestro-material']" class="contact-button">Descargar Material</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+  
+    <!-- Sección Galería -->
+<section id="galeria" class="section">
+  <div class="gallery-content">
+      <div class="gallery-text">
+          <h3 class="gallery-title">Galería de Magnífico</h3>
+          <p>En esta sección se presentarán fotografías de la campaña de Magnífico a medida que el proyecto avance. Aquí podrá encontrar y visualizar todo el material relacionado con las actividades realizadas, permitiéndole conocer en detalle el trabajo que se lleva a cabo.</p>
+      </div>
+      <div class="gallery-images">
+          <a [routerLink]="['/image-detail', 1]" class="gallery-item">
+              <img src="assets/paginamagnifico/image-details/actividad1/image5.png" alt="Descripción de la imagen 1" />
+              <div class="overlay">
+                  <span class="overlay-title">Lanzamiento de Personaje</span>
+              </div>
+          </a>
+          <a [routerLink]="['/image-detail', 2]" class="gallery-item">
+              <img src="assets/paginamagnifico/image-details/actividad2/image1.png" alt="Descripción de la imagen 2" />
+              <div class="overlay">
+                  <span class="overlay-title">Activación de Tranvía</span>
+              </div>
+          </a>
+          <a [routerLink]="['/image-detail', 3]" class="gallery-item">
+              <img src="assets/paginamagnifico/image-details/actividad3/image1.png" alt="Descripción de la imagen 3" />
+              <div class="overlay">
+                  <span class="overlay-title">Activación de Mercado</span>
+              </div>
+          </a>
+          <a [routerLink]="['/image-detail', 4]" class="gallery-item">
+              <img src="assets/paginamagnifico/image-details/actividad4/image1.png" alt="Descripción de la imagen 4" />
+              <div class="overlay">
+                  <span class="overlay-title">Activación de Escuela</span>
+              </div>
+          </a>
+          <a [routerLink]="['/image-detail', 5]" class="gallery-item">
+              <img src="assets/paginamagnifico/image-details/actividad5/image.png" alt="Descripción de la imagen 5" />
+              <div class="overlay">
+                  <span class="overlay-title">Ver Más</span>
+              </div>
+          </a>
+          <a [routerLink]="['/image-detail', 6]" class="gallery-item">
+              <img src="assets/paginamagnifico/image-details/actividad6/image.png" alt="Descripción de la imagen 6" />
+              <div class="overlay">
+                  <span class="overlay-title">Ver Más</span>
+              </div>
+          </a>
+          <a [routerLink]="['/image-detail', 7]" class="gallery-item">
+            <img src="assets/paginamagnifico/image-details/actividad7/image.png" alt="Descripción de la imagen 6" />
+            <div class="overlay">
+                <span class="overlay-title">Ver Más</span>
+            </div>
+        </a>
+        <a [routerLink]="['/image-detail', 8]" class="gallery-item">
+          <img src="assets/paginamagnifico/image-details/actividad8/image.png" alt="Descripción de la imagen 6" />
+          <div class="overlay">
+              <span class="overlay-title">Ver Más</span>
+          </div>
+      </a>
+      <a [routerLink]="['/image-detail', 9]" class="gallery-item">
+        <img src="assets/paginamagnifico/image-details/actividad9/image.png" alt="Descripción de la imagen 6" />
+        <div class="overlay">
+            <span class="overlay-title">Ver Más</span>
+        </div>
+    </a>
+      </div>
+  </div>
+</section>
+  
+    <!-- Sección Acerca de -->
+    <section id="acerca" class="info-container">
+      <h2 class="info-title">¿Quién es Magnífico?</h2>
+      <p class="info-text">El colibrí es reconocido por su energía, resiliencia y capacidad de adaptación. Su vuelo ágil, su papel como polinizador y su belleza natural lo convierten en un símbolo de aprendizaje, cambio e impacto positivo. En esta campaña, el colibrí recibe el nombre de "Magnífico", resaltando su grandeza y la importancia de lo extraordinario en lo cotidiano.</p>
+      <p class="info-text">Más que un personaje, Magnífico simboliza la educación, la transformación y la conexión con el entorno, siendo el emblema ideal de esta campaña para mejorar la vida de los cuencanos y cuencanas.</p>
+      <div class="card-container">
+          <div class="card">
+              <i class="fa-solid fa-heart"></i> <!-- Cambia el ícono según sea necesario -->
+              <h3 class="card-title">Fomentar el aprendizaje continuo</h3>
+              <p class="card-text">Promover el desarrollo de habilidades y conocimientos en la comunidad cuencana a través de iniciativas educativas innovadoras.</p>
+          </div>
+          <div class="card">
+              <i class="fa-solid fa-star"></i> <!-- Cambia el ícono según sea necesario -->
+              <h3 class="card-title">Inspirar resiliencia y adaptación</h3>
+              <p class="card-text">Motivar a la comunidad a enfrentar desafíos con perseverancia y flexibilidad, resaltando la importancia de la superación personal y colectiva.</p>
+          </div>
+          <div class="card">
+              <i class="fa-solid fa-check"></i> <!-- Cambia el ícono según sea necesario -->
+              <h3 class="card-title">Revalorizar lo extraordinario en lo cotidiano</h3>
+              <p class="card-text">Sensibilizar a la comunidad sobre la importancia de pequeños cambios y acciones que pueden generar grandes transformaciones en la sociedad..</p>
+          </div>
+          <div class="card">
+              <i class="fa-solid fa-bell"></i> <!-- Cambia el ícono según sea necesario -->
+              <h3 class="card-title">Fortalecer la identidad cultural y comunitaria</h3>
+              <p class="card-text">Integrar elementos de la cultura cuencana en la campaña, reforzando el sentido de pertenencia y el orgullo por las tradiciones locales.</p>
+          </div>
+      </div>
+  </section>
+  
+       <!-- Sección Contacto -->
+<section id="contacto"  class="contact-container">
+    <div class="contact-image">
+        <img src="assets/paginamagnifico/contacto/magnifico.png" alt="Descripción de la imagen" />
+    </div>
+    <div class="contact-info">
+        <h2 class="contact-title">Contáctate con Nosotros</h2>
+        <p class="contact-text">Síguenos en nuestras redes sociales para estar al tanto de nuestras novedades y contenido exclusivo. ¡Únete a nuestra comunidad!</p>
+        <!-- Cambiamos el enlace por un botón que use routerLink -->
+        <button [routerLink]="['/formulario-contacto']" class="contact-button">Contáctanos</button>
+    </div>
+</section>
+  
+ 
+
+  <!-- Logos de patrocinadores -->
+  <div class="container">
+      <div class="empresas-carousel slick-carousel">
+          <div><img src="assets/paginamagnifico/logosempresas/amorcuenca.png" alt="Amor por Cuenca" class="empresas-img"></div>
+          <div><img src="assets/paginamagnifico/logosempresas/alcaldiacuenca.png" alt="Cuenca" class="empresas-img"></div>
+          <div><img src="assets/paginamagnifico/logosempresas/salud.png" alt="Salud" class="empresas-img"></div>
+          <div><img src="assets/paginamagnifico/logosempresas/novo.png" alt="Novo Nordisk" class="empresas-img"></div>
+          <div><img src="assets/paginamagnifico/logosempresas/casadeladiabetes.png" alt="Casa de la Diabetes" class="empresas-img"></div>
+      </div>
+  </div>
+  <!-- Separador -->
+  <div class="separador"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="social-links">
+        <p>Síguenos en:</p>
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/@casadeladiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/CasaDeDiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/casadeladiabetes/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/i/flow/login?redirect_after_login=%2FCasaDeDiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UC1YqPCb6B9XO6dHkYYXpIrg" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+    <p class="copyright">© 2025 Cities for Better Health - Todos los derechos reservados</p>
+</footer>

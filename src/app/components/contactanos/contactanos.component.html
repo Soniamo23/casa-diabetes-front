@@ -1,0 +1,85 @@
+<div class="contact-container">
+    <!-- Imagen principal -->
+    <div class="donation-image-container">
+      <div class="container text-center mt-4">
+        <img src="assets/casadeladiabetes.png" alt="Ir a Nueva Página" class="img-fluid enlace-imagen">
+      </div>
+    </div>
+  
+    <!-- Título -->
+    <h2>Contáctanos</h2>
+  
+    <!-- Formulario -->
+    <form [formGroup]="contactForm" (ngSubmit)="enviarFormulario()">
+      <!-- Reemplaza tus form-row actuales con estas -->
+<div class="form-row">
+    <div class="form-group">
+      <label for="asunto">Asunto</label>
+      <input type="text" id="asunto" formControlName="asunto" required />
+    </div>
+    <div class="form-group">
+      <label for="telefono">Teléfono</label>
+      <input type="text" id="telefono" formControlName="telefono" required />
+    </div>
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group" style="width: 100%">
+      <label for="correo">Correo</label>
+      <input type="email" id="correo" formControlName="correo" required />
+    </div>
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" formControlName="nombre" required />
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellido</label>
+      <input type="text" id="apellido" formControlName="apellido" required />
+    </div>
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group" style="width: 100%">
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" formControlName="mensaje" required></textarea>
+    </div>
+  </div>
+  
+      <button type="submit" class="submit-button">ENVIAR</button>
+    </form>
+  
+    <!-- segundo carrusel con clase distintiva -->
+<!--CARRUSEL DE IMAGENES -->
+<div class="container mt-4 position-relative">
+  <button class="custom-arrow custom-prev" onclick="$('.empresas-carousel').slick('slickPrev')">&lt;</button>
+  <div class="slick-carousel empresas-carousel">
+      <div><img src="assets/empresas/club.png" class="empresas-img" alt="Imagen 1"></div>
+      <div><img src="assets/empresas/federacion.png" class="empresas-img" alt="Imagen 2"></div>
+      <div><img src="assets/empresas/insulin.png" class="empresas-img" alt="Imagen 3"></div>
+      <div><img src="assets/empresas/lapa.png" class="empresas-img" alt="Imagen 4"></div>
+      <div><img src="assets/empresas/life.png" class="empresas-img" alt="Imagen 5"></div>
+      <div><img src="assets/empresas/renarec.png" class="empresas-img" alt="Imagen 6"></div>
+      <div><img src="assets/empresas/Ucatolica.png" class="empresas-img" alt="Imagen 7"></div>
+      <div><img src="assets/empresas/UCuenca.png" class="empresas-img" alt="Imagen 8"></div>
+      <div><img src="assets/empresas/redcap.png" class="empresas-img" alt="Imagen 9"></div>
+  </div>
+  <button class="custom-arrow custom-next" onclick="$('.empresas-carousel').slick('slickNext')">&gt;</button>
+</div>
+
+
+
+<!--ICONOS DE REDES SOCIALES-->
+
+<!-- Sección de iconos de redes sociales -->
+<div class="social-bar">
+  <a href="https://www.tiktok.com/@casadeladiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+  <a href="https://www.facebook.com/CasaDeDiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+  <a href="https://www.instagram.com/casadeladiabetes/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+  <a href="https://x.com/i/flow/login?redirect_after_login=%2FCasaDeDiabetes" target="_blank" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+  <a href="https://www.youtube.com/channel/UC1YqPCb6B9XO6dHkYYXpIrg" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+</div>
+
+

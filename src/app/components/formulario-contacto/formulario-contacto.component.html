@@ -1,0 +1,80 @@
+<!-- formulario-contacto.component.html -->
+<div class="form-container" [ngClass]="'text-' + fontSize">
+    <div class="form-header">
+      <h1>Formulario de Contacto - Magnífico</h1>
+      <div class="font-size-controls">
+        
+      </div>
+    </div>
+    
+    <div class="logo-container">
+      <!-- Botón para volver atrás -->
+      <button class="back-button" (click)="goBack()">
+        <span class="back-icon">&#9664;</span>
+      </button>
+      
+      <!-- Logo de Magnífico -->
+      <img src="assets/formulariocontacto/image.png" alt="Logo Magnífico" class="logo">
+    </div>
+    
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="form-section">
+        <div class="form-question">
+          <label>¿Te comunicas con nosotros en nombre de:</label>
+          <div class="option-buttons">
+            <button 
+              type="button" 
+              [class.selected]="tipoContacto === 'empresa'"
+              (click)="seleccionarTipo('empresa')"
+              class="option-button">
+              Una empresa
+            </button>
+            <button 
+              type="button" 
+              [class.selected]="tipoContacto === 'personal'"
+              (click)="seleccionarTipo('personal')"
+              class="option-button">
+              Título personal
+            </button>
+          </div>
+          <a href="javascript:void(0)" class="reset-link" (click)="resetearValor()">Restablecer el valor</a>
+        </div>
+      </div>
+      
+      <div class="form-section">
+        <div class="form-field">
+          <label for="nombreCompleto">Indique su nombre completo:</label>
+          <input 
+            type="text" 
+            id="nombreCompleto" 
+            formControlName="nombreCompleto" 
+            class="form-input">
+          <div *ngIf="contactForm.get('nombreCompleto')?.invalid && contactForm.get('nombreCompleto')?.touched" class="error-message">
+            Este campo es obligatorio
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-section">
+        <div class="form-field">
+          <label for="mensaje">Indique en que podemos ayudarle:</label>
+          <textarea 
+            id="mensaje" 
+            #mensajeTextarea
+            formControlName="mensaje" 
+            class="form-textarea"></textarea>
+          <div *ngIf="contactForm.get('mensaje')?.invalid && contactForm.get('mensaje')?.touched" class="error-message">
+            Este campo es obligatorio
+          </div>
+          <div class="expand-link">
+            <a href="javascript:void(0)" (click)="expandTextarea($event)">Expandir</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-actions">
+        <button type="submit" class="submit-button">Enviar</button>
+      </div>
+    </form>
+    
+    
