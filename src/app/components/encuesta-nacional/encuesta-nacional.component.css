@@ -1,7 +1,7 @@
 /* Estilos base */
 .cards-container {
   display: flex;
-  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en pantallas pequeñas */
+  flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
   margin-top: 2rem;
@@ -14,7 +14,7 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin-bottom: 1rem; /* Espacio inferior para cuando se apilan */
+  margin-bottom: 1rem; 
 }
 
 .card img {
@@ -35,7 +35,7 @@
   max-width: 800px;
   margin: 2rem auto;
   text-align: center;
-  padding: 0 15px; /* Padding para pantallas pequeñas */
+  padding: 0 15px; 
 }
 
 .detail-container button {
@@ -48,13 +48,13 @@
 
 /* Contenedor general para controlar todo el bloque */
 .partners-section {
-  margin-top: 80px; /* Espacio superior reducido para móviles */
+  margin-top: 80px; 
 }
 
 /* Carrusel */
 .empresas-carousel {
   margin: 0 auto !important;
-  width: 90%; /* Ancho mayor para móviles */
+  width: 90%; 
   overflow: hidden !important;
   position: relative;
 }
@@ -79,7 +79,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-size: 30px; /* Tamaño reducido para móviles */
+  font-size: 30px; 
   font-weight: bold;
   border: none;
   transition: all 0.3s ease;
@@ -91,11 +91,11 @@
 }
 
 .custom-prev {
-  left: 50px; /* Ligeramente separado del borde */
+  left: 50px; 
 }
 
 .custom-next {
-  right: 50px; /* Ligeramente separado del borde */
+  right: 50px; 
 }
 
 /* Barra de redes sociales */
@@ -106,13 +106,13 @@
   align-items: center;
   padding: 10px;
   margin-top: 30px;
-  flex-wrap: wrap; /* Para que los iconos se envuelvan en pantallas muy pequeñas */
+  flex-wrap: wrap; 
 }
 
 /* Iconos */
 .social-icon {
   color: white;
-  font-size: 20px; /* Tamaño reducido para móviles */
+  font-size: 20px; 
   margin: 0 10px;
   transition: transform 0.3s ease, color 0.3s ease;
   text-decoration: none;
@@ -125,7 +125,7 @@
 
 /* Media queries para diferentes tamaños de pantalla */
 
-/* Tablets */
+
 @media (min-width: 768px) {
   .partners-section {
     margin-top: 100px;

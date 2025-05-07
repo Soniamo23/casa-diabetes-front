@@ -643,6 +643,7 @@ h2 {
     /* Galería */
     .gallery-images {
         grid-template-columns: repeat(2, 1fr);
+        margin-left: 20px; 
     }
 
     /* Tarjetas */
@@ -723,6 +724,15 @@ h2 {
         width: 100%;
         right: -100%;
     }
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.7); /* Más opaco en pantallas muy pequeñas para mejor contraste */
+        padding: 4px;
+    }
+
+    .overlay-title {
+        font-size: 14px;
+        padding: 6px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -748,9 +758,19 @@ h2 {
     .empresas-next {
       display: none;
     }
+    .overlay {
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.6); 
+        padding: 5px;
+    }
+
+    .overlay-title {
+        font-size: 16px;  
+        padding: 8px;
+    }
   }
   
-/* Ya no necesitamos el botón hamburguesa personalizado porque Bootstrap lo proporciona */
+
 
 
 

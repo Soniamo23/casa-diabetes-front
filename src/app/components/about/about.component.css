@@ -1,6 +1,4 @@
-/* ===================== */
-/* Estilos base (pantalla grande) */
-/* ===================== */
+
 
 /* Contenedor general */
 .container {
@@ -16,9 +14,9 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* ===================== */
+
 /* Sección “Nosotros” */
-/* ===================== */
+
 .nosotros {
   background-color: #2994d1;
   padding: 20px;
@@ -36,20 +34,20 @@
 }
 .nosotros h2::before {
   content: ">";
-  color: #1d428c;
-  margin-right: 10px;
+  color: #f2a53b;
+  margin-right: 20px;
+  font-size: 45px;
 }
 .nosotros li {
   list-style-type: none;
   font-family: "Quicksand", Sans-serif;
   font-weight: 600;
   margin-top: 30px;
-  font-size: 16px; /* ajustado según pediste */
+  font-size: 16px; 
 }
 
-/* ===================== */
 /* Línea de tiempo */
-/* ===================== */
+
 .timeline {
   position: relative;
   max-width: 800px;
@@ -75,7 +73,7 @@
 .timeline-title::before {
   content: "> ";
   color: #f2a53b;
-  font-size: 28px;
+  font-size: 38px;
   font-weight: bold;
   margin-right: 10px;
 }
@@ -181,9 +179,9 @@
   right: calc(50% - 5px);
 }
 
-/* ===================== */
+
 /* Secciones Misión / Visión */
-/* ===================== */
+
 .seccion {
   width: 100%;
   padding: 60px 20px;
@@ -216,7 +214,7 @@
   margin-bottom: 20px;
 }
 .flecha {
-  font-size: 28px;
+  font-size: 45px;
   margin-right: 10px;
 }
 .flecha.azul { color: #1c3d88; }
@@ -224,12 +222,12 @@
 .justificado {
   text-align: justify;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.9  ;
 }
 
-/* ===================== */
+
 /* Carrusel de empresas */
-/* ===================== */
+
 .empresas-carousel {
   position: relative;
   margin: 60px auto !important;
@@ -265,9 +263,8 @@
 .custom-prev { left: 180px; }
 .custom-next { right: 180px; }
 
-/* ===================== */
 /* Barra de redes sociales */
-/* ===================== */
+
 .social-bar {
   background-color: #1d428c;
   display: flex;
@@ -288,11 +285,11 @@
   color: #FFD700;
 }
 
-/* ===================== */
+
 /* 📱 Media Queries (≤768px) */
-/* ===================== */
+
 @media (max-width: 768px) {
-  /* Ajustes generales */
+
   .container {
     padding: 10px;
   }

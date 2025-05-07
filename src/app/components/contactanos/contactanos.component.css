@@ -1,6 +1,6 @@
-/* ===================== */
+
 /* Estilos generales */
-/* ===================== */
+
 .contact-container {
   margin: 0 auto;
   padding: 20px;
@@ -78,9 +78,9 @@ textarea {
   background-color: #e8971a;
 }
 
-/* ===================== */
+
 /* Carrusel de empresas */
-/* ===================== */
+
 .empresas-carousel {
   position: relative;
   margin: 60px auto !important;
@@ -116,9 +116,9 @@ textarea {
 .custom-prev { left: 180px; }
 .custom-next { right: 180px; }
 
-/* ===================== */
+
 /* Barra azul de redes sociales */
-/* ===================== */
+
 .social-bar {
   background-color: #1d428c;
   display: flex;
@@ -141,11 +141,11 @@ textarea {
   color: #FFD700;
 }
 
-/* ===================== */
+
 /* 📱 Media Queries (≤768px) */
-/* ===================== */
+
 @media (max-width: 768px) {
-  /* Contenedor y formulario apilados */
+  
   .contact-container {
     padding: 10px;
   }

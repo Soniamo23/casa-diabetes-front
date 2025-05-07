@@ -1,8 +1,8 @@
-/* ====== SECCIÓN ACTIVIDADES (CON FONDO AZUL) ====== */
+/* ====== SECCIÓN ACTIVIDADES ====== */
 .activities-section {
-  background-color: #008cdd; /* Azul del carrusel */
+  background-color: #008cdd; 
   padding: 30px 20px;
-  color: white; /* Color del texto */
+  color: white; 
   text-align: center;
 }
 
@@ -29,7 +29,7 @@
 /* Flecha antes del título */
 .activities-content .section-title::before {
   content: ">";
-  color: #0056b3; /* Azul oscuro */
+  color: #0056b3; 
   margin-right: 10px;
   font-size: 30px;
   font-weight: bold;
@@ -51,7 +51,7 @@
   object-fit: cover;
   background: none !important;
   border: none;
-  max-height: 400px; /* Altura máxima pero manteniendo proporción */
+  max-height: 400px; 
 }
 
 /* Flechas del carrusel */
@@ -125,12 +125,12 @@
   transform: translateY(-50%);
   z-index: 100;
   background: none;
-  color: #0047AB; /* Color azul para las flechas */
+  color: #0047AB; 
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-size: 40px; /* Tamaño grande para las flechas */
+  font-size: 40px; 
   font-weight: bold;
   border: none;
   transition: all 0.3s ease;
@@ -138,20 +138,20 @@
 }
 
 .custom-arrow:hover {
-  color: #002D72; /* Azul más oscuro al pasar el cursor */
+  color: #002D72; 
 }
 
 .custom-prev {
-  left: 180px; /* Ajusta la posición de la flecha izquierda */
+  left: 180px; 
 }
 
 .custom-next {
-  right: 180px; /* Ajusta la posición de la flecha derecha */
+  right: 180px; 
 }
 
 /* ====== SECCIÓN DONACIONES ====== */
 .donation-container {
-  background-color: #1e4388; /* Azul oscuro como en la imagen */
+  background-color: #1e4388; 
   color: white;
   padding: 50px 20px;
   width: 100%;
@@ -168,7 +168,7 @@
 }
 
 .arrow-icon {
-  color: #ff7f00; /* Color naranja para la flecha */
+  color: #ff7f00; 
   font-size: 24px;
   margin-right: 10px;
   font-weight: bold;
@@ -183,10 +183,10 @@
 
 /* Texto de donaciones */
 .donation-description {
-  font-family: "Quicksand", Sans-serif; /* Fuente Quicksand */
-  font-size: 20px; /* Tamaño de fuente como en el ejemplo */
-  font-weight: 600; /* Peso de la fuente semibold */
-  color: var(--e-global-color-nvsecondaryaccent); /* Utilizando la variable de color */
+  font-family: "Quicksand", Sans-serif; 
+  font-size: 20px;
+  font-weight: 600; 
+  color: var(--e-global-color-nvsecondaryaccent); 
   max-width: 800px;
   margin: 0 auto 40px;
   line-height: 1.5;
@@ -230,8 +230,8 @@
 .donate-button {
   display: inline-block;
   padding: 10px 30px;
-  background-color: #ffc439; /* Color amarillo de PayPal */
-  color: #003087; /* Color azul de PayPal */
+  background-color: #ffc439; 
+  color: #003087; 
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
@@ -247,7 +247,7 @@
 
 /* 🔹 Barra azul para las redes sociales */
 .social-bar {
-  background-color: #1d428c; /* Azul */
+  background-color: #1d428c; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,10 +266,10 @@
 
 .social-icon:hover {
   transform: scale(1.2);
-  color: #FFD700; /* Amarillo dorado al pasar el mouse */
+  color: #FFD700; 
 }
 
-/* ====== MEDIA QUERIES PARA RESPONSIVE ====== */
+
 
 /* Tablets y dispositivos medianos */
 @media (max-width: 991px) {
@@ -324,7 +324,7 @@
   /* Ajustes para las flechas personalizadas */
   .custom-arrow {
     font-size: 30px;
-    background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+    background-color: rgba(255, 255, 255, 0.5); 
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -354,7 +354,7 @@
   .donation-description {
     font-size: 16px;
     margin-bottom: 30px;
-    text-align: left; /* Mejor legibilidad en móviles */
+    text-align: left; 
   }
   
   /* Cambiar a estructura de columna para móviles */
@@ -386,9 +386,9 @@
   }
 }
 
-/* iPhone específicamente */
+
 @media (max-width: 390px) {
-  /* El iPhone 12 Pro tiene aproximadamente 390px de ancho */
+  
   .activities-content .section-title {
     font-size: 18px;
   }
@@ -402,7 +402,7 @@
   }
   
   .slick-carousel {
-    width: 90%; /* Reducido para dejar espacio a las flechas */
+    width: 90%; 
   }
   
   /* Imágenes aún más pequeñas en iPhone */

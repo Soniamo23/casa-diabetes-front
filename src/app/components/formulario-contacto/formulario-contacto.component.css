@@ -5,7 +5,7 @@
   background-color: white;
   border: 1px solid #e0e0e0;
   font-family: Arial, sans-serif;
-  padding: 20px; /* Agregar padding para que el contenido no esté pegado a los bordes */
+  padding: 20px;
 }
 
 /* Encabezado del formulario */
@@ -13,7 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0; /* Ajustar el padding */
+  padding: 10px 0; 
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -85,13 +85,12 @@ h1 {
 
 /* Logo */
 .logo {
-  max-width: 100%; /* Cambiar a 100% para que sea responsivo */
   height: auto;
 }
 
 /* Sección del formulario */
 .form-section {
-  padding: 15px 0; /* Ajustar el padding */
+  padding: 15px 0; 
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -172,7 +171,7 @@ label {
 .form-actions {
   display: flex;
   justify-content: center;
-  padding: 20px 0; /* Ajustar el padding */
+  padding: 20px 0; 
 }
 
 /* Botón de envío */
@@ -216,57 +215,57 @@ label {
 
 /* Media Queries para Responsividad */
 
-/* Pantallas medianas (tablets) */
+
 @media (max-width: 768px) {
   .form-container {
-      padding: 15px; /* Reducir el padding en pantallas más pequeñas */
+      padding: 15px; 
   }
 
   h1 {
-      font-size: 18px; /* Ajustar el tamaño del título */
+      font-size: 18px; 
   }
 
   .font-size-btn {
-      font-size: 14px; /* Ajustar el tamaño de los botones de tamaño de fuente */
+      font-size: 14px; 
   }
 
   .form-input, .form-textarea {
-      font-size: 14px; /* Ajustar el tamaño de la fuente en los campos */
+      font-size: 14px; 
   }
 
   .submit-button {
-      padding: 8px 20px; /* Ajustar el padding del botón de envío */
+      padding: 8px 20px; 
   }
 }
 
 /* Pantallas pequeñas (móviles) */
 @media (max-width: 576px) {
   .form-container {
-      padding: 10px; /* Reducir aún más el padding */
+      padding: 10px;
   }
 
   h1 {
-      font-size: 16px; /* Ajustar el tamaño del título */
+      font-size: 16px; 
   }
 
   .font-size-btn {
-      font-size: 12px; /* Ajustar el tamaño de los botones de tamaño de fuente */
+      font-size: 12px; 
   }
 
   .form-input, .form-textarea {
-      font-size: 12px; /* Ajustar el tamaño de la fuente en los campos */
+      font-size: 12px; 
   }
 
   .submit-button {
-      padding: 8px 15px; /* Ajustar el padding del botón de envío */
+      padding: 8px 15px; 
   }
 
   .back-button {
-      width: 25px; /* Ajustar el tamaño del botón de retroceso */
+      width: 25px; 
       height: 25px;
   }
 
   .back-icon {
-      font-size: 10px; /* Ajustar el tamaño del icono de retroceso */
+      font-size: 10px; 
   }
 }

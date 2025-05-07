@@ -1,4 +1,4 @@
-/* ==== Reglas Generales para Mejorar la Responsividad ==== */
+
 * {
   box-sizing: border-box;
 }
@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Evita scroll horizontal */
+  overflow-x: hidden; 
   font-family: Arial, sans-serif;
 }
 
@@ -25,24 +25,24 @@ body {
   margin-bottom: 25px;
   color: #1D428C;
   font-weight: 600;
-  position: relative; /* Asegúrate de que el contenedor sea relativo */
+  position: relative; 
 }
 
-.section-title::before { /* Cambia ::after a ::before para que la flecha esté antes del texto */
-  content: "›"; /* Flecha */
+.section-title::before { 
+  content: "›"; 
   color: #FFA500;
   font-size: 40px;
-  position: absolute; /* Posición absoluta */
-  left: 500px; /* Ajusta este valor para mover la flecha más cerca o más lejos del título */
-  top: 50%; /* Centra verticalmente */
-  transform: translateY(-50%); /* Ajusta para centrar verticalmente */
-  line-height: 1; /* Asegúrate de que la línea esté alineada */
+  position: absolute; 
+  left: 500px; 
+  top: 50%; 
+  transform: translateY(-50%);
+  line-height: 1; 
 }
 
 /* Contenedor del carrusel */
 .slick-carousel-container {
   position: relative;
-  padding: 0 40px; /* Espacio aumentado para las flechas */
+  padding: 0 40px; 
   margin: 0 auto;
   max-width: 95%;
 }
@@ -58,16 +58,16 @@ body {
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
-  padding: 10px;
-  margin: 10px 20px; /* Aumenta el margen horizontal */
+  padding: 25px;
+  margin: 10px 20px; 
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   
   transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   height: calc(100% - 20px);
-  min-height: 400px; /* Aumentado a 400px para hacerlas más rectangulares */
-  width: calc(33.333% - 40px); /* Cada tarjeta ocupa 1/3 del ancho menos los márgenes */
+  min-height: 400px; 
+  width: calc(33.333% - 40px); 
 }
 
 .activity-card:hover {
@@ -77,13 +77,13 @@ body {
 
 .activity-card img {
   width: 100%;
-  height: 220px; /* Aumentado a 220px para hacer la imagen más alta */
+  height: 220px; 
   object-fit: cover;
   border-radius: 6px;
 }
 
 .card-info {
-  padding: 15px 5px; /* Aumentado el padding vertical de 10px a 15px */
+  padding: 15px 5px; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -92,7 +92,7 @@ body {
 
 .activity-title {
   font-size: 14px;
-  margin: 0 0 15px 0; /* Aumentado el margen inferior de 10px a 15px */
+  margin: 0 0 15px 0;
   line-height: 1.3;
   font-weight: 500;
   color: #333;
@@ -100,16 +100,16 @@ body {
 
 .btn-primary {
   display: inline-block;
-  padding: 8px 14px; /* Aumentado ligeramente el padding */
-  background-color: #DD7D00;
+  background-color: #FFA500;
   color: white;
+  padding: 10px 30px;
   text-decoration: none;
   border-radius: 5px;
-  margin-top: auto;
-  transition: background-color 0.3s ease;
-  font-weight: 500;
+  font-weight: bold;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   border: none;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .btn-primary:hover {
@@ -119,7 +119,7 @@ body {
 .btn-ver-mas {
   display: inline-block;
   padding: 8px 20px;
-  background-color: #1D428C;
+  background-color: #C56C00;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -138,20 +138,20 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 100; /* Incrementar para asegurar que esté por encima */
+  z-index: 100; 
   background: transparent;
   color: #1D428C;
   font-size: 40px;
   width: 50px;
-  height: 50px; /* Aumentar altura para área clicable */
+  height: 50px; 
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: color 0.2s ease;
-  user-select: none; /* Evitar selección del texto */
-  pointer-events: auto; /* Asegura que capture clics */
+  user-select: none; 
+  pointer-events: auto; 
 }
 
 .custom-arrow:hover {
@@ -179,8 +179,8 @@ body {
 /* Estilos responsivos mejorados */
 @media (max-width: 992px) {
   .activity-card {
-    width: calc(50% - 40px); /* En tablets, 2 tarjetas por fila */
-    min-height: 370px; /* Mantiene la proporción rectangular */
+    width: calc(50% - 40px); 
+    min-height: 370px; 
   }
   
   .slick-carousel-container {
@@ -190,73 +190,73 @@ body {
 
 @media (max-width: 768px) {
   .slick-carousel-container {
-    padding: 0 45px; /* Aumentado para dar más espacio a las flechas */
+    padding: 0 45px; 
   }
   
   .activity-card {
-    width: calc(100% - 30px); /* En móviles, 1 tarjeta por fila */
-    min-height: 350px; /* Mantiene la proporción rectangular */
+    width: calc(100% - 30px); 
+    min-height: 350px; 
     margin: 10px 15px;
   }
   
   .custom-arrow {
-    font-size: 30px; /* Aumentado para mejor toque en móviles */
+    font-size: 30px; 
   }
   
   .custom-prev {
-    left: 5px; /* Ajustado para móviles */
+    left: 5px; 
   }
 
   .custom-next {
-    right: 5px; /* Ajustado para móviles */
+    right: 5px; 
   }
   
   .activity-card img {
-    height: 200px; /* Ajustado para móviles */
+    height: 200px; 
   }
 }
 
 @media (max-width: 576px) {
   .slick-carousel-container {
-    padding: 0 50px; /* Aumentado a 50px para dar más espacio a las flechas */
-    max-width: 100%; /* Usar todo el ancho disponible */
+    padding: 0 50px; 
+    max-width: 100%; 
   }
   
   .activity-card {
-    min-height: 320px; /* Ajustado para móviles pequeños */
+    min-height: 320px; 
     padding: 10px;
-    margin: 10px 5px; /* Reducido margen horizontal */
-    width: calc(100% - 10px); /* Asegura que la tarjeta ocupe todo el ancho disponible */
+    margin: 10px 5px; 
+    width: calc(100% - 10px);
   }
   
   .card-info {
-    padding: 10px 5px; /* Ajustado */
+    padding: 10px 5px; 
   }
   
   .activity-title {
     font-size: 13px;
-    margin-bottom: 10px; /* Ajustado */
+    margin-bottom: 10px; 
   }
   
   .btn-primary {
-    padding: 6px 12px; /* Ajustado */
-    font-size: 12px;
+    padding: 6px 12px; 
+    font-size: 20x;
   }
   
   .custom-prev {
-    left: 10px; /* Ajustado para móviles pequeños */
+    left: 10px; 
   }
 
   .custom-next {
-    right: 10px; /* Ajustado para móviles pequeños */
+    right: 10px;
   }
   
   .custom-arrow {
-    font-size: 24px; /* Reducido ligeramente pero manteniendo buen tamaño táctil */
+    font-size: 24px;
   }
   
   .section-title::before {
-    left: 70px; /* Ajusta la posición de la flecha en pantallas más pequeñas */
+    left: 70px; 
     font-size: 40px;
   }
 }
@@ -285,11 +285,11 @@ body {
   content: "›"; /* Flecha */
   color: #FFA500;
   font-size: 40px;
-  position: absolute; /* Posición absoluta */
-  left: 370px; /* Ajusta este valor para mover la flecha más cerca o más lejos del título */
-  top: 50%; /* Centra verticalmente */
-  transform: translateY(-50%); /* Ajusta para centrar verticalmente */
-  line-height: 1; /* Asegúrate de que la línea esté alineada */
+  position: absolute; 
+  left: 370px; 
+  top: 50%; 
+  transform: translateY(-50%);
+  line-height: 1;
 }
 
 .medical-card {
@@ -308,7 +308,7 @@ body {
 
 .medical-logo {
   flex: 0 0 auto;
-  max-width: 180px;
+  max-width: 390px;
   height: auto;
   margin-right: 30px;
 }
@@ -394,7 +394,7 @@ body {
   margin-bottom: 20px;
   color: #1D428C;
   text-align: left;
-  position: relative; /* Asegúrate de que el contenedor sea relativo */
+  position: relative; 
 }
 
 .patients-and-programs .section-title::before {
@@ -402,15 +402,22 @@ body {
   color: #FFA500;
   font-size: 40px;
   position: absolute;
-  left: -50px; /* Ajusta según sea necesario */
+  left: -50px; 
   top: 50%;
   transform: translateY(-50%);
-  margin-right: 10px; /* Espacio entre la flecha y el título */
+  margin-right: 10px; 
 }
 
 .registration-section p {
-  text-align: justify; /* Justifica el texto */
-  color: #1D428C; /* Color celeste */
+  text-align: justify; 
+  color: #1D428C; 
+}
+.training-section h3 {
+  color: #1D428C; /* Color negro como solicitaste */
+  text-align: center; /* Centrado horizontal */
+  margin: 30px 0 20px; /* Espacio arriba y abajo */
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .registration-image {
